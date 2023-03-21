@@ -30,7 +30,7 @@ val assign_cards : table -> table
     their cards already *)
 
 val pot_size : table -> int
-(** returns table pot size*)
+(** returns table pot size *)
 
 val turn : table -> string
 (** returns the name of the player that needs to act *)
