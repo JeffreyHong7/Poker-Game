@@ -39,5 +39,5 @@ val turn : table -> string
 val raise : table -> string -> int -> table
 (** raises the player's bet for the current round *)
 
-val fold : table -> player -> table
+val fold : table -> table
 (** removes the player folding from the current round *)

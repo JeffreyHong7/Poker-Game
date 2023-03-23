@@ -99,3 +99,17 @@ let raise t n a =
     pot = t.pot + a;
     action = raise_helper t t.players n;
   }
+
+let rec find_next_player lst current_player =
+  match lst with
+  | [] -> failwith "no player"
+  | h :: t ->
+      if h = current_player then match t with h :: _ -> h | [] -> List.hd lst
+      else find_next_player t current_player
+
+let fold t =
+  {
+    players = List.filter (fun x -> x <> t.action) t.players;
+    pot = t.pot;
+    action = find_next_player t.players t.action;
+  }
