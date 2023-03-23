@@ -5,13 +5,7 @@ open List
 
 type card = { name : string; suit : string; value : int }
 type player = { name : string; cards : card list; bet : int; money : int }
-
-type table = {
-  players : player list;
-  current_bet : int;
-  pot : int;
-  action : player;
-}
+type table = { players : player list; pot : int; action : player }
 
 let card_info =
   [
@@ -53,7 +47,6 @@ let start p_list =
   if length >= 2 && length <= 10 then
     {
       players = p_list;
-      current_bet = 0;
       pot = 0;
       action = (match p_list with h :: _ -> h | _ -> raise PlayerSize);
     }
@@ -78,11 +71,31 @@ let rec assign_helper p_list d =
       @ assign_helper t (filter (fun x -> x <> card_one && x <> card_two) d)
 
 let assign_cards t =
-  {
-    players = assign_helper t.players deck;
-    current_bet = t.current_bet;
-    pot = t.pot;
-    action = t.action;
-  }
+  { players = assign_helper t.players deck; pot = t.pot; action = t.action }
 
 let pot_size t = t.pot
+let turn t = t.action
+
+let rec raise_helper t lst n =
+  match lst with
+  | [] -> raise PlayerSize
+  | h :: tl ->
+      if h.name = t.action.name then
+        match tl with [] -> hd t.players | temp :: _ -> temp
+      else raise_helper t tl n
+
+let raise t n a =
+  {
+    players =
+      fold_left
+        (fun acc x ->
+          if x.name <> n then acc @ [ x ]
+          else
+            acc
+            @ [
+                { name = x.name; cards = x.cards; bet = a; money = x.money - a };
+              ])
+        [] t.players;
+    pot = t.pot + a;
+    action = raise_helper t t.players n;
+  }
