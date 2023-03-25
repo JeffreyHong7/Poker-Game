@@ -75,7 +75,7 @@ let assign_cards t =
   { players = assign_helper t.players deck; pot = t.pot; action = t.action }
 
 let pot_size t = t.pot
-let turn t = t.action
+let turn t = t.action.name
 
 let rec raise_helper t lst =
   match lst with
