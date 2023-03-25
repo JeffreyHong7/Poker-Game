@@ -36,8 +36,8 @@ val pot_size : table -> int
 val turn : table -> string
 (** returns the name of the player that needs to act *)
 
-val raise : table -> string -> int -> table
-(** raises the player's bet for the current round *)
+val raise : table -> int -> table
+(** raises the action player's bet for the current round *)
 
 val fold : table -> table
 (** removes the player folding from the current round *)

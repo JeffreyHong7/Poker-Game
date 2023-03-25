@@ -53,6 +53,7 @@ let start p_list =
   else raise PlayerSize
 
 let rec assign_helper p_list d =
+  self_init ();
   match p_list with
   | [] -> []
   | h :: t ->
@@ -76,20 +77,20 @@ let assign_cards t =
 let pot_size t = t.pot
 let turn t = t.action
 
-let rec raise_helper t lst n =
+let rec raise_helper t lst =
   match lst with
   | [] -> raise PlayerSize
   | h :: tl ->
       if h.name = t.action.name then
         match tl with [] -> hd t.players | temp :: _ -> temp
-      else raise_helper t tl n
+      else raise_helper t tl
 
-let raise t n a =
+let raise t a =
   {
     players =
       fold_left
         (fun acc x ->
-          if x.name <> n then acc @ [ x ]
+          if x.name <> t.action.name then acc @ [ x ]
           else
             acc
             @ [
@@ -97,19 +98,19 @@ let raise t n a =
               ])
         [] t.players;
     pot = t.pot + a;
-    action = raise_helper t t.players n;
+    action = raise_helper t t.players;
   }
 
 let rec find_next_player lst current_player =
   match lst with
   | [] -> failwith "no player"
   | h :: t ->
-      if h = current_player then match t with h :: _ -> h | [] -> List.hd lst
+      if h = current_player then match t with h :: _ -> h | [] -> hd lst
       else find_next_player t current_player
 
 let fold t =
   {
-    players = List.filter (fun x -> x <> t.action) t.players;
+    players = filter (fun x -> x <> t.action) t.players;
     pot = t.pot;
     action = find_next_player t.players t.action;
   }
