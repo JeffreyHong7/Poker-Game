@@ -15,7 +15,7 @@ type table
 exception PlayerSize
 (** raised if invalid number of players n<2 or n>10 *)
 
-val create_player : string -> int -> player
+val create_player : string -> float -> player
 (** [create_player n m] creates a player with name n with m money. 
     Requires: [n] must not already be the name of a current player. *)
 
@@ -30,13 +30,13 @@ val assign_cards : table -> table
 (** Each player in table will receive their cards. Requires: no player has 
     their cards already *)
 
-val pot_size : table -> int
+val pot_size : table -> float
 (** returns table pot size *)
 
 val turn : table -> string
 (** returns the name of the player that needs to act *)
 
-val raise : table -> int -> table
+val raise : table -> float -> table
 (** raises the action player's bet for the current round *)
 
 val find_next_player : table -> player
