@@ -1,9 +1,9 @@
-# dune exec ./test/main.exe
+# dune build
 # OCAMLPARAM: unset
 # Shared cache: disabled
-# Workspace root: /Users/elpatron/cs3110/cs3110-final-project
+# Workspace root: /Users/jeffreyhong/cs3110/final-project
 # Auto-detected concurrency: 8
-$ /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/n0/038zn15d43q8dnrwknqw42m80000gn/T/dune_f8d1d3_output
+$ /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/wr/mpfxy_096l383fhkw91jg16h0000gn/T/dune_dec0f5_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,44 +13,45 @@ $ /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/n0/0
 #  ; fdo_target_exe = None
 #  ; build_dir = In_build_dir "default"
 #  ; toplevel_path =
-#      Some External "/Users/elpatron/.opam/cs3110-2023sp/lib/toplevel"
-#  ; ocaml_bin = External "/Users/elpatron/.opam/cs3110-2023sp/bin"
-#  ; ocaml = Ok External "/Users/elpatron/.opam/cs3110-2023sp/bin/ocaml"
-#  ; ocamlc = External "/Users/elpatron/.opam/cs3110-2023sp/bin/ocamlc.opt"
+#      Some External "/Users/jeffreyhong/.opam/cs3110-2023sp/lib/toplevel"
+#  ; ocaml_bin = External "/Users/jeffreyhong/.opam/cs3110-2023sp/bin"
+#  ; ocaml = Ok External "/Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocaml"
+#  ; ocamlc = External "/Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt"
 #  ; ocamlopt =
-#      Ok External "/Users/elpatron/.opam/cs3110-2023sp/bin/ocamlopt.opt"
+#      Ok External "/Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt"
 #  ; ocamldep =
-#      Ok External "/Users/elpatron/.opam/cs3110-2023sp/bin/ocamldep.opt"
+#      Ok External "/Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamldep.opt"
 #  ; ocamlmklib =
-#      Ok External "/Users/elpatron/.opam/cs3110-2023sp/bin/ocamlmklib.opt"
+#      Ok External "/Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlmklib.opt"
 #  ; env =
 #      map
-#        { "DUNE_OCAML_HARDCODED" : "/Users/elpatron/.opam/cs3110-2023sp/lib"
+#        { "DUNE_OCAML_HARDCODED" :
+#            "/Users/jeffreyhong/.opam/cs3110-2023sp/lib"
 #        ; "DUNE_OCAML_STDLIB" :
-#            "/Users/elpatron/.opam/cs3110-2023sp/lib/ocaml"
-#        ; "DUNE_SOURCEROOT" : "/Users/elpatron/cs3110/cs3110-final-project"
+#            "/Users/jeffreyhong/.opam/cs3110-2023sp/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/Users/jeffreyhong/cs3110/final-project"
 #        ; "INSIDE_DUNE" :
-#            "/Users/elpatron/cs3110/cs3110-final-project/_build/default"
+#            "/Users/jeffreyhong/cs3110/final-project/_build/default"
 #        ; "MANPATH" :
-#            "/Users/elpatron/cs3110/cs3110-final-project/_build/install/default/bin"
+#            "/Users/jeffreyhong/cs3110/final-project/_build/install/default/bin"
 #        ; "OCAMLFIND_IGNORE_DUPS_IN" :
-#            "/Users/elpatron/cs3110/cs3110-final-project/_build/install/default/lib"
+#            "/Users/jeffreyhong/cs3110/final-project/_build/install/default/lib"
 #        ; "OCAMLPATH" :
-#            "/Users/elpatron/cs3110/cs3110-final-project/_build/install/default/lib"
+#            "/Users/jeffreyhong/cs3110/final-project/_build/install/default/lib"
 #        ; "OCAMLTOP_INCLUDE_PATH" :
-#            "/Users/elpatron/cs3110/cs3110-final-project/_build/install/default/lib/toplevel"
+#            "/Users/jeffreyhong/cs3110/final-project/_build/install/default/lib/toplevel"
 #        ; "OCAML_COLOR" : "always"
 #        ; "OPAMCOLOR" : "always"
 #        }
-#  ; findlib_paths = [ External "/Users/elpatron/.opam/cs3110-2023sp/lib" ]
+#  ; findlib_paths = [ External "/Users/jeffreyhong/.opam/cs3110-2023sp/lib" ]
 #  ; arch_sixtyfour = true
 #  ; natdynlink_supported = true
 #  ; supports_shared_libraries = true
 #  ; ocaml_config =
 #      { version = "4.14.0"
 #      ; standard_library_default =
-#          "/Users/elpatron/.opam/cs3110-2023sp/lib/ocaml"
-#      ; standard_library = "/Users/elpatron/.opam/cs3110-2023sp/lib/ocaml"
+#          "/Users/jeffreyhong/.opam/cs3110-2023sp/lib/ocaml"
+#      ; standard_library = "/Users/jeffreyhong/.opam/cs3110-2023sp/lib/ocaml"
 #      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
 #      ; ccomp_type = "cc"
 #      ; c_compiler = "cc"
@@ -96,8 +97,8 @@ $ /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/n0/0
 #      ; os_type = "Unix"
 #      ; default_executable_name = "a.out"
 #      ; systhread_supported = true
-#      ; host = "x86_64-apple-darwin21.6.0"
-#      ; target = "x86_64-apple-darwin21.6.0"
+#      ; host = "x86_64-apple-darwin21.3.0"
+#      ; target = "x86_64-apple-darwin21.3.0"
 #      ; profiling = false
 #      ; flambda = false
 #      ; spacetime = false
@@ -117,20 +118,45 @@ $ /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/n0/0
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.poker.objs/byte -I src/.poker.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/.poker.objs/native/poker.cmx -c -impl src/poker.ml)
-> File "src/poker.ml", line 1:
-> Error: The implementation src/poker.ml
->        does not match the interface src/.poker.objs/byte/poker.cmi: 
->        The value `start' is required but not provided
->        File "src/poker.mli", line 21, characters 0-42: Expected declaration
->        The value `assign_cards' is required but not provided
->        File "src/poker.mli", line 28, characters 0-33: Expected declaration
->        The value `pot_size' is required but not provided
->        File "src/poker.mli", line 32, characters 0-27: Expected declaration
->        The value `turn' is required but not provided
->        File "src/poker.mli", line 35, characters 0-26: Expected declaration
->        The value `raise' is required but not provided
->        File "src/poker.mli", line 38, characters 0-28: Expected declaration
->        The value `call' is required but not provided
->        File "src/poker.mli", line 41, characters 0-36: Expected declaration
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.poker.objs/byte -no-alias-deps -opaque -o src/.poker.objs/byte/poker.cmi -c -intf src/poker.mli)
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2 -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2/advanced -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/seq -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/stdlib-shims -I src/.poker.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.poker.objs/byte -intf-suffix .ml -no-alias-deps -opaque -o src/.poker.objs/byte/poker.cmo -c -impl src/poker.ml)
+> File "src/poker.ml", line 6, characters 14-28:
+> 6 | type card = { name : string; suit : string; value : int }
+>                   ^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field name is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/poker.ml", line 6, characters 29-43:
+> 6 | type card = { name : string; suit : string; value : int }
+>                                  ^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field suit is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/poker.ml", line 6, characters 44-55:
+> 6 | type card = { name : string; suit : string; value : int }
+>                                                 ^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field value is never read.
+> (However, this field is used to build or mutate values.)
+[2]
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2 -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2/advanced -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/seq -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/stdlib-shims -I src/.poker.objs/byte -I src/.poker.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
+> File "test/main.ml", line 2, characters 0-10:
+> 2 | open Poker
+>     ^^^^^^^^^^
+> Error (warning 33 [unused-open]): unused open Poker.
+[2]
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.poker.objs/byte -I src/.poker.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/.poker.objs/native/poker.cmx -c -impl src/poker.ml)
+> File "src/poker.ml", line 6, characters 14-28:
+> 6 | type card = { name : string; suit : string; value : int }
+>                   ^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field name is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/poker.ml", line 6, characters 29-43:
+> 6 | type card = { name : string; suit : string; value : int }
+>                                  ^^^^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field suit is never read.
+> (However, this field is used to build or mutate values.)
+> File "src/poker.ml", line 6, characters 44-55:
+> 6 | type card = { name : string; suit : string; value : int }
+>                                                 ^^^^^^^^^^^
+> Error (warning 69 [unused-field]): record field value is never read.
+> (However, this field is used to build or mutate values.)
 [2]

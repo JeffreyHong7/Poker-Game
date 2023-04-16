@@ -40,16 +40,20 @@ let deck =
   @ []
 
 let create_player n m = { name = n; cards = []; bet = 0; money = m }
+
+(* helper methods for start *)
 let rec start_helper = function [] -> 0 | _ :: t -> 1 + start_helper t
+
+let rec action_helper lst assign_index acc =
+  match lst with
+  | [] -> failwith "unable to assign player"
+  | h :: t ->
+      if acc = assign_index then h else action_helper t assign_index (acc + 1)
 
 let start p_list =
   let length = start_helper p_list in
   if length >= 2 && length <= 10 then
-    {
-      players = p_list;
-      pot = 0;
-      action = (match p_list with h :: _ -> h | _ -> raise PlayerSize);
-    }
+    { players = p_list; pot = 0; action = action_helper p_list (int length) 0 }
   else raise PlayerSize
 
 let rec assign_helper p_list d =
@@ -101,16 +105,18 @@ let raise t a =
     action = raise_helper t t.players;
   }
 
-let rec find_next_player lst current_player =
+let rec find_next_helper lst current =
   match lst with
   | [] -> failwith "no player"
   | h :: t ->
-      if h = current_player then match t with h :: _ -> h | [] -> hd lst
-      else find_next_player t current_player
+      if h = current then match t with h :: _ -> h | [] -> hd lst
+      else find_next_helper t current
+
+let rec find_next_player t = find_next_helper t.players t.action
 
 let fold t =
   {
     players = filter (fun x -> x <> t.action) t.players;
     pot = t.pot;
-    action = find_next_player t.players t.action;
+    action = find_next_player t;
   }

@@ -1,7 +1,7 @@
 (** Representation of poker data
 
-  This module represents the types and functions that a player can proceed
-with *)
+     This module represents the types and functions that a player can proceed
+   with *)
 
 type card
 (** the abstract type representing a playing card *)
@@ -38,6 +38,8 @@ val turn : table -> string
 
 val raise : table -> int -> table
 (** raises the action player's bet for the current round *)
+
+val find_next_player : table -> player
 
 val fold : table -> table
 (** removes the player folding from the current round *)
