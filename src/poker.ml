@@ -17,9 +17,10 @@ type player = {
 type table = {
   players : player list;
   current_bet : float;
+  board : card list;
   pot : float;
   action : player;
-  table_deck : card list;
+  deck : card list;
   small_blind : float;
   big_blind : float;
 }
@@ -60,7 +61,7 @@ let rec create_deck lst suit_type =
   | [] -> []
   | h :: t -> create_card h suit_type :: create_deck t suit_type
 
-let deck =
+let full_deck =
   create_deck card_info "Spades"
   @ create_deck card_info "Hearts"
   @ create_deck card_info "Diamonds"
@@ -79,46 +80,10 @@ let rec action_helper lst assign_index acc =
   | h :: t ->
       if acc = assign_index then h else action_helper t assign_index (acc + 1)
 
-let rec restore_bets p_list =
-  match p_list with
-  | [] -> []
-  | h :: t ->
-      {
-        name = h.name;
-        cards = h.cards;
-        bet = 0.;
-        money = h.money;
-        starting_pos = h.starting_pos;
-      }
-      :: restore_bets t
-
-let rec post_flop_order table p_list =
-  restore_bets
-    (let lst =
-       match p_list with
-       | [] -> []
-       | h :: t ->
-           if tl t = [] then
-             h :: hd t :: filter (fun x -> x <> h && x <> hd t) table.players
-           else post_flop_order table t
-     in
-     if length lst = 2 then rev lst else lst)
-
-let check_flop t =
-  if
-    for_all (fun x -> x.bet = t.current_bet) t.players
-    && t.action = hd t.players
-  then
-    {
-      players = post_flop_order t t.players;
-      current_bet = 0.;
-      pot = t.pot;
-      action = hd (post_flop_order t t.players);
-      table_deck = t.table_deck;
-      small_blind = t.small_blind;
-      big_blind = t.big_blind;
-    }
-  else t
+let rec last_to_act lst =
+  match lst with
+  | [] -> raise PlayerSize
+  | h :: t -> if t = [] then h else last_to_act t
 
 let rec blind_assign p_list s b =
   match p_list with
@@ -192,7 +157,7 @@ let rec update_deck player_cards deck =
   | h :: t -> update_deck t (List.filter (fun x -> x <> h) deck)
 
 let assign_cards t =
-  let updated_player_list = update_player_cards t.players deck in
+  let updated_player_list = update_player_cards t.players full_deck in
   let rec player_cards players =
     match players with [] -> [] | h :: t -> h.cards @ player_cards t
   in
@@ -201,7 +166,8 @@ let assign_cards t =
     current_bet = t.current_bet;
     pot = t.pot;
     action = t.action;
-    table_deck = update_deck (player_cards updated_player_list) t.table_deck;
+    board = t.board;
+    deck = update_deck (player_cards updated_player_list) t.deck;
     small_blind = t.small_blind;
     big_blind = t.big_blind;
   }
@@ -215,13 +181,143 @@ let start p_list s b =
         players = new_player_list;
         current_bet = b;
         pot = s +. b;
+        board = [];
         action =
           (match new_player_list with h :: _ -> h | _ -> raise PlayerSize);
-        table_deck = deck;
+        deck = full_deck;
         small_blind = s;
         big_blind = b;
       }
   else raise PlayerSize
+
+let deal_cards t =
+  self_init ();
+  let burn_card = nth t.deck (int (length t.deck)) in
+  let burnt =
+    {
+      players = t.players;
+      pot = t.pot;
+      current_bet = t.current_bet;
+      action = t.action;
+      board = t.board;
+      deck = update_deck [ burn_card ] t.deck;
+      small_blind = t.small_blind;
+      big_blind = t.big_blind;
+    }
+  in
+  let rec helper deck i acc =
+    let card = nth deck (int (length deck)) in
+    if i <> 0 then
+      helper (List.filter (fun x -> x <> card) deck) (i - 1) (card :: acc)
+    else acc
+  in
+  let table =
+    {
+      players = burnt.players;
+      pot = burnt.pot;
+      action = burnt.action;
+      current_bet = t.current_bet;
+      board =
+        (match length t.board with
+        | 0 -> helper burnt.deck 3 []
+        | _ -> helper burnt.deck 1 []);
+      deck = burnt.deck;
+      small_blind = t.small_blind;
+      big_blind = t.big_blind;
+    }
+  in
+  {
+    players = table.players;
+    pot = table.pot;
+    action = table.action;
+    current_bet = t.current_bet;
+    board = table.board;
+    deck = update_deck table.board table.deck;
+    small_blind = t.small_blind;
+    big_blind = t.big_blind;
+  }
+
+let rec restore_bets p_list =
+  match p_list with
+  | [] -> []
+  | h :: t ->
+      {
+        name = h.name;
+        cards = h.cards;
+        bet = 0.;
+        money = h.money;
+        starting_pos = h.starting_pos;
+      }
+      :: restore_bets t
+
+let rec post_flop_order table p_list =
+  restore_bets
+    (let lst =
+       match p_list with
+       | [] -> []
+       | h :: t ->
+           if tl t = [] then
+             h :: hd t :: filter (fun x -> x <> h && x <> hd t) table.players
+           else post_flop_order table t
+     in
+     if length lst = 2 then rev lst else lst)
+
+let check_flop t =
+  if
+    for_all (fun x -> x.bet = t.current_bet) t.players
+    && t.action = hd t.players
+    && length t.board = 0
+  then
+    let table = deal_cards t in
+    {
+      players = post_flop_order t t.players;
+      pot = t.pot;
+      current_bet = 0.;
+      board = table.board;
+      action = hd (post_flop_order t t.players);
+      deck = table.deck;
+      small_blind = t.small_blind;
+      big_blind = t.big_blind;
+    }
+  else t
+
+let check_turn t =
+  if
+    for_all (fun x -> x.bet = t.current_bet) t.players
+    && t.action = last_to_act t.players
+    && length t.board = 3
+  then
+    let table = deal_cards t in
+    {
+      players = t.players;
+      current_bet = 0.;
+      pot = t.pot;
+      board = table.board;
+      action = hd t.players;
+      deck = table.deck;
+      small_blind = t.small_blind;
+      big_blind = t.big_blind;
+    }
+  else t
+
+let check_river t =
+  if
+    for_all (fun x -> x.bet = t.current_bet) t.players
+    && t.action = last_to_act t.players
+    && length t.board = 4
+  then
+    let table = deal_cards t in
+    {
+      players = t.players;
+      current_bet = 0.;
+      pot = t.pot;
+      board = table.board;
+      action = hd t.players;
+      deck = table.deck;
+      small_blind = t.small_blind;
+      big_blind = t.big_blind;
+    }
+  else t
 
 let pot_size t = t.pot
 let turn t = t.action.name
@@ -235,31 +331,34 @@ let rec raise_helper t lst =
       else raise_helper t tl
 
 let raise t a =
-  check_flop
-    {
-      players =
-        fold_left
-          (fun acc x ->
-            if x.name <> t.action.name then acc @ [ x ]
-            else
-              acc
-              @ [
-                  {
-                    name = x.name;
-                    cards = x.cards;
-                    bet = a;
-                    money = x.money -. a;
-                    starting_pos = x.starting_pos;
-                  };
-                ])
-          [] t.players;
-      pot = t.pot +. a;
-      current_bet = a;
-      action = raise_helper t t.players;
-      table_deck = t.table_deck;
-      small_blind = t.small_blind;
-      big_blind = t.big_blind;
-    }
+  check_river
+    (check_turn
+       (check_flop
+          {
+            players =
+              fold_left
+                (fun acc x ->
+                  if x.name <> t.action.name then acc @ [ x ]
+                  else
+                    acc
+                    @ [
+                        {
+                          name = x.name;
+                          cards = x.cards;
+                          bet = a;
+                          money = x.money -. a;
+                          starting_pos = x.starting_pos;
+                        };
+                      ])
+                [] t.players;
+            pot = t.pot +. a;
+            current_bet = a;
+            board = t.board;
+            action = raise_helper t t.players;
+            deck = t.deck;
+            small_blind = t.small_blind;
+            big_blind = t.big_blind;
+          }))
 
 let rec find_next_helper lst current =
   match lst with
@@ -271,32 +370,39 @@ let rec find_next_helper lst current =
 let rec find_next_player t = find_next_helper t.players t.action
 
 let check t =
-  check_flop
-    (if t.current_bet = t.action.bet then
-     {
-       players = t.players;
-       current_bet = t.current_bet;
-       pot = t.pot;
-       action = find_next_player t;
-       table_deck = t.table_deck;
-       small_blind = t.small_blind;
-       big_blind = t.big_blind;
-     }
-    else
-      failwith ("Cannot check. " ^ t.action.name ^ " must fold, call, or raise."))
+  check_river
+    (check_turn
+       (check_flop
+          (if t.current_bet = t.action.bet then
+           {
+             players = t.players;
+             current_bet = t.current_bet;
+             pot = t.pot;
+             action = find_next_player t;
+             board = t.board;
+             deck = t.deck;
+             small_blind = t.small_blind;
+             big_blind = t.big_blind;
+           }
+          else
+            failwith
+              ("Cannot check. " ^ t.action.name ^ " must fold, call, or raise."))))
 
 let fold t =
   check_win
-    (check_flop
-       {
-         players = filter (fun x -> x <> t.action) t.players;
-         pot = t.pot;
-         current_bet = t.current_bet;
-         action = find_next_player t;
-         table_deck = t.table_deck;
-         small_blind = t.small_blind;
-         big_blind = t.big_blind;
-       })
+    (check_river
+       (check_turn
+          (check_flop
+             {
+               players = filter (fun x -> x <> t.action) t.players;
+               pot = t.pot;
+               current_bet = t.current_bet;
+               action = find_next_player t;
+               board = t.board;
+               deck = t.deck;
+               small_blind = t.small_blind;
+               big_blind = t.big_blind;
+             })))
 
 let rec call_helper t lst =
   match lst with
@@ -314,23 +420,27 @@ let rec call_helper t lst =
       else h :: call_helper t tl
 
 let call t =
-  check_flop
-    {
-      players = call_helper t t.players;
-      pot = t.pot +. (t.current_bet -. t.action.bet);
-      current_bet = t.current_bet;
-      action =
-        find_next_player
+  check_river
+    (check_turn
+       (check_flop
           {
+            players = call_helper t t.players;
             pot = t.pot +. (t.current_bet -. t.action.bet);
             current_bet = t.current_bet;
-            action = t.action;
-            players = call_helper t t.players;
-            table_deck = t.table_deck;
+            action =
+              find_next_player
+                {
+                  pot = t.pot +. (t.current_bet -. t.action.bet);
+                  current_bet = t.current_bet;
+                  action = t.action;
+                  players = call_helper t t.players;
+                  board = t.board;
+                  deck = t.deck;
+                  small_blind = t.small_blind;
+                  big_blind = t.big_blind;
+                };
+            board = t.board;
+            deck = t.deck;
             small_blind = t.small_blind;
             big_blind = t.big_blind;
-          };
-      table_deck = t.table_deck;
-      small_blind = t.small_blind;
-      big_blind = t.big_blind;
-    }
+          }))

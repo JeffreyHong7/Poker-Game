@@ -43,3 +43,6 @@ val find_next_player : table -> player
 
 val fold : table -> table
 (** removes the player folding from the current round *)
+
+val deal_cards : table -> table
+(** deals the cards for the table, removes from deck *)
