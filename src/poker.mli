@@ -48,4 +48,4 @@ val deal_cards : table -> table
 (** deals the cards for the table, removes from deck *)
 
 val stand_off : table -> table
-(** determines the winner of the pokker hand *)
+(** determines the winner of the poker hand *)
