@@ -642,3 +642,29 @@ let stand_off t =
     small_blind = t.small_blind;
     big_blind = t.big_blind;
   }
+
+let show_board (t : table) = t.board
+let show_cards (t : table) = t.action.cards
+
+let check_game (t : table) =
+  print_string ("pot: " ^ string_of_float t.pot);
+  print_newline ();
+  print_string ("current bet: " ^ string_of_float t.current_bet);
+  print_newline ();
+  print_newline ();
+  List.map
+    (fun x ->
+      print_string ("player: " ^ x.name);
+      print_newline ();
+      print_string ("bet: " ^ string_of_float x.bet);
+      print_newline ();
+      print_string ("money: " ^ string_of_float x.money);
+      print_newline ();
+      print_newline ())
+    t.players
+
+let winner stand_off =
+  List.map
+    (fun x ->
+      x.money = stand_off.pot /. float_of_int (length stand_off.players))
+    stand_off.players

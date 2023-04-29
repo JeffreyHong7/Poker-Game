@@ -22,9 +22,9 @@ val create_player : string -> float -> player
 val start : player list -> table
 (** creates an empty table with an empty pot and no bets. The player who acts 
 first is assigned by standard poker rules in which each player at the table
-    is assigned a card and the player with the highest card is positioned as 
-    button, small blind, or big blind. Raises an exception PlayerSize if player size is less 
-      than 2 or greater than 10 *)
+is assigned a card and the player with the highest card is positioned as 
+button, small blind, or big blind. Raises an exception PlayerSize 
+if player size is less than 2 or greater than 10 *)
 
 val assign_cards : table -> table
 (** Each player in table will receive their cards. Requires: no player has 
@@ -49,3 +49,16 @@ val deal_cards : table -> table
 
 val stand_off : table -> table
 (** determines the winner of the poker hand *)
+
+val show_board : table -> unit
+(** prints the current board of the game *)
+
+val show_cards : table -> unit
+(** prints the acting player's hand *)
+
+val check_game : table -> unit
+(** prints the pot size, current bet, and for each player, their name, 
+    current bet, and stack size *)
+
+val winner : table -> player list
+(* returns the winners with their moneys adjusted accordingly *)
