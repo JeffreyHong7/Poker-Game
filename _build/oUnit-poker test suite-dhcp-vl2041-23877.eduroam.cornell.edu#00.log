@@ -1,0 +1,58 @@
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Runner: processes
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Chooser: simple
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration suite_name = "poker test suite"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration cache_filename = "/Users/jeffreyhong/cs3110/final-project/_build/oUnit-$(suite_name).cache"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration run_gc_full_major = "true"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration display = "true"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration results_style_1_X = "false"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration testdata_dir = "none"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration health_check_interval = "1."
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration verbose = "false"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration chooser = "simple"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration output_html_dir = "none"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration processes_kill_period = "5."
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration runner = "processes"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration shards = "2"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration processes_grace_period = "5."
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration log_encoding = "utf-8"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration output_junit_file = "none"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration ci = "false"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Configuration output_file = "/Users/jeffreyhong/cs3110/final-project/_build/oUnit-$(suite_name)-$(shard_id).log"
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Using 2 workers maximum.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Starting worker number dhcp-vl2041-23877.eduroam.cornell.edu#01.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-23877.eduroam.cornell.edu#01 started.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Still 1 tests running : poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: 1 tests running: poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 I: Start test poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Still 1 tests running : poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: 1 tests running: poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: Test poker test suite:0:straight has failed.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: expected: chris but got: justin in test poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: 
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Still 1 tests running : poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: 1 tests running: poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 I: End test poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Still 1 tests running : poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: 1 tests running: poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: 0 tests running: .
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-23877.eduroam.cornell.edu#01 has ended.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Used 1 worker during test execution.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Run 1 tests with shard dhcp-vl2041-23877.eduroam.cornell.edu#01.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Check health of shard dhcp-vl2041-23877.eduroam.cornell.edu#01, 1 times.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: ==============
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Summary:
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 E: Test poker test suite:0:straight has failed.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 E: expected: chris but got: justin in test poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 E: 
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Ran: 1 tests in: 0.11 seconds.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Cases: 1.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Tried: 1.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Errors: 0.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Failures: 1.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Skip: 0.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Todo: 0.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#00 I: Timeout: 0.

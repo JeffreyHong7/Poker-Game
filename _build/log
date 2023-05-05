@@ -1,9 +1,9 @@
-# dune build
+# dune exec --instrument-with bisect_ppx --force test/main.exe
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root: /Users/jeffreyhong/cs3110/final-project
 # Auto-detected concurrency: 8
-$ /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/wr/mpfxy_096l383fhkw91jg16h0000gn/T/dune_dec0f5_output
+$ /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/wr/mpfxy_096l383fhkw91jg16h0000gn/T/dune_753eaf_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -118,45 +118,11 @@ $ /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/w
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.poker.objs/byte -no-alias-deps -opaque -o src/.poker.objs/byte/poker.cmi -c -intf src/poker.mli)
-$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2 -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2/advanced -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/seq -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/stdlib-shims -I src/.poker.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
-$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.poker.objs/byte -intf-suffix .ml -no-alias-deps -opaque -o src/.poker.objs/byte/poker.cmo -c -impl src/poker.ml)
-> File "src/poker.ml", line 6, characters 14-28:
-> 6 | type card = { name : string; suit : string; value : int }
->                   ^^^^^^^^^^^^^^
-> Error (warning 69 [unused-field]): record field name is never read.
-> (However, this field is used to build or mutate values.)
-> File "src/poker.ml", line 6, characters 29-43:
-> 6 | type card = { name : string; suit : string; value : int }
->                                  ^^^^^^^^^^^^^^
-> Error (warning 69 [unused-field]): record field suit is never read.
-> (However, this field is used to build or mutate values.)
-> File "src/poker.ml", line 6, characters 44-55:
-> 6 | type card = { name : string; suit : string; value : int }
->                                                 ^^^^^^^^^^^
-> Error (warning 69 [unused-field]): record field value is never read.
-> (However, this field is used to build or mutate values.)
-[2]
-$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2 -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2/advanced -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/seq -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/stdlib-shims -I src/.poker.objs/byte -I src/.poker.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
-> File "test/main.ml", line 2, characters 0-10:
-> 2 | open Poker
->     ^^^^^^^^^^
-> Error (warning 33 [unused-open]): unused open Poker.
-[2]
-$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.poker.objs/byte -I src/.poker.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/.poker.objs/native/poker.cmx -c -impl src/poker.ml)
-> File "src/poker.ml", line 6, characters 14-28:
-> 6 | type card = { name : string; suit : string; value : int }
->                   ^^^^^^^^^^^^^^
-> Error (warning 69 [unused-field]): record field name is never read.
-> (However, this field is used to build or mutate values.)
-> File "src/poker.ml", line 6, characters 29-43:
-> 6 | type card = { name : string; suit : string; value : int }
->                                  ^^^^^^^^^^^^^^
-> Error (warning 69 [unused-field]): record field suit is never read.
-> (However, this field is used to build or mutate values.)
-> File "src/poker.ml", line 6, characters 44-55:
-> 6 | type card = { name : string; suit : string; value : int }
->                                                 ^^^^^^^^^^^
-> Error (warning 69 [unused-field]): record field value is never read.
-> (However, this field is used to build or mutate values.)
-[2]
+$ (cd _build/.sandbox/710a3dfcff614fcdd67458bdafd7ef32/default && .ppx/47e007fefa63695257b4d9874e3138b7/ppx.exe --cookie 'library-name="poker"' -o src/poker.pp.mli --intf src/poker.mli -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/.sandbox/1f5074e53358f507e58e90275c59b5c1/default && .ppx/47e007fefa63695257b4d9874e3138b7/ppx.exe --cookie 'library-name="poker"' -o src/poker.pp.ml --impl src/poker.ml -corrected-suffix .ppx-corrected -diff-cmd - -dump-ast)
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I src/.poker.objs/byte -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/common -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/runtime -no-alias-deps -opaque -o src/.poker.objs/byte/poker.cmi -c -intf src/poker.pp.mli)
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlc.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -I test/.main.eobjs/byte -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/common -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/runtime -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2 -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2/advanced -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/seq -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/stdlib-shims -I src/.poker.objs/byte -no-alias-deps -opaque -o test/.main.eobjs/byte/dune__exe__Main.cmi -c -intf test/main.mli)
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.main.eobjs/byte -I test/.main.eobjs/native -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/common -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/runtime -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2 -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2/advanced -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/seq -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/stdlib-shims -I src/.poker.objs/byte -I src/.poker.objs/native -intf-suffix .ml -no-alias-deps -opaque -o test/.main.eobjs/native/dune__exe__Main.cmx -c -impl test/main.ml)
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.poker.objs/byte -I src/.poker.objs/native -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/common -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/runtime -intf-suffix .ml -no-alias-deps -opaque -o src/.poker.objs/native/poker.cmx -c -impl src/poker.pp.ml)
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o src/poker.cmxa src/.poker.objs/native/poker.cmx)
+$ (cd _build/default && /Users/jeffreyhong/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/main.exe /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/common/bisect_common.cmxa /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ocaml/unix.cmxa -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ocaml /Users/jeffreyhong/.opam/cs3110-2023sp/lib/bisect_ppx/runtime/bisect.cmxa src/poker.cmxa -I /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ocaml /Users/jeffreyhong/.opam/cs3110-2023sp/lib/stdlib-shims/stdlib_shims.cmxa /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/jeffreyhong/.opam/cs3110-2023sp/lib/ounit2/oUnit.cmxa test/.main.eobjs/native/dune__exe__Main.cmx)

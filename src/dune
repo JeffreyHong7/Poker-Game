@@ -1,2 +1,4 @@
 (library
- (name poker))
+ (name poker)
+ (instrumentation
+  (backend bisect_ppx)))

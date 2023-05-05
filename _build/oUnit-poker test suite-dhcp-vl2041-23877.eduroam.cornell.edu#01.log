@@ -1,0 +1,7 @@
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 I: Start test poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: Test poker test suite:0:straight has failed.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: expected: chris but got: justin in test poker test suite:0:straight.
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 E: 
+2023-05-01T18:25:00+00:00 dhcp-vl2041-23877.eduroam.cornell.edu#01 I: End test poker test suite:0:straight.

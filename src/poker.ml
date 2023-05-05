@@ -1,5 +1,4 @@
 exception PlayerSize
-exception EndOfHand of string
 
 open Random
 open List
@@ -54,17 +53,6 @@ let card_info =
     ("ace", 14);
   ]
 
-let check_win t =
-  if length t.players = 1 then
-    raise
-      (EndOfHand
-         ("Winner: "
-         ^
-         match t.players with
-         | h :: _ -> h.name ^ " !"
-         | _ -> failwith "Impossible"))
-  else t
-
 let create_card info suit_type =
   match info with x, y -> { name = x; suit = suit_type; value = y }
 
@@ -85,12 +73,6 @@ let create_player n m =
 
 (* helper methods for start *)
 let rec num_players = function [] -> 0 | _ :: t -> 1 + num_players t
-
-let rec action_helper lst assign_index acc =
-  match lst with
-  | [] -> failwith "unable to assign player"
-  | h :: t ->
-      if acc = assign_index then h else action_helper t assign_index (acc + 1)
 
 let rec last_to_act lst =
   match lst with
@@ -335,7 +317,7 @@ let rec find_next_helper table lst =
         match t with h' :: _ -> h' | [] -> hd table.players
       else find_next_helper table t
 
-let rec find_next_player t = find_next_helper t t.players
+let find_next_player t = find_next_helper t t.players
 
 let raise t a =
   let post_action_table =
@@ -501,7 +483,7 @@ let call t =
       else check_river post_action_table
   | _ -> post_action_table
 
-let rec best_matches cards =
+let best_matches cards =
   let sorted = sort (fun x y -> x.value - y.value) cards in
   let high_card = HighCard (nth sorted (length sorted - 1)).value in
   let best_hand = ref high_card in
@@ -523,17 +505,32 @@ let rec best_matches cards =
         | FullHouse (p, _) -> best_hand := FullHouse (p, i)
         | Quads _ -> ()
         | _ -> best_hand := Trips i)
-    | _ -> best_hand := Quads i
+    | 4 -> best_hand := Quads i
+    | _ -> best_hand := !best_hand
   done;
   !best_hand
 
-let rec straight sorted_uniq acc high =
-  match sorted_uniq with
-  | [] -> if acc > 4 then Some (Straight high) else None
-  | h :: t ->
-      let temp = filter (fun x -> x.value = h.value + 1) t in
-      if length temp = 1 then straight t (acc + 1) (nth temp 0).value
-      else straight t acc high
+let straight sorted_uniq =
+  let counter = ref 1 in
+  let found_straight = ref false in
+  let array = Array.of_list sorted_uniq in
+  let temp = ref array.(0).value in
+  let straight = ref (Some (Straight !temp)) in
+  let _ =
+    if !temp = 2 && array.(Array.length array - 1).value = 14 then
+      counter := !counter + 1
+  in
+  let _ =
+    for i = 1 to Array.length array - 1 do
+      if array.(i).value = !temp + 1 then (
+        counter := !counter + 1;
+        straight := Some (Straight array.(i).value))
+      else if !counter > 4 then found_straight := true
+      else counter := 1;
+      temp := array.(i).value
+    done
+  in
+  if !counter > 4 || !found_straight then !straight else None
 
 let flush cards =
   let sorted = sort (fun x y -> x.value - y.value) cards in
@@ -543,25 +540,33 @@ let flush cards =
   let spades = filter (fun x -> x.suit = Spades) sorted in
   let flush list = Some (Flush (nth list (length list - 1)).value) in
   let straight_flush list =
-    straight (sort_uniq (fun x y -> x.value - y.value) list) 0 0
+    straight (sort_uniq (fun x y -> x.value - y.value) list)
   in
   if length clubs > 4 then
-    match straight_flush clubs with Some s -> Some s | None -> flush clubs
+    match straight_flush clubs with
+    | Some (Straight v) -> Some (StraightFlush v)
+    | None -> flush clubs
+    | _ -> failwith "straight error"
   else if length diamonds > 4 then
     match straight_flush diamonds with
-    | Some s -> Some s
+    | Some (Straight v) -> Some (StraightFlush v)
     | None -> flush diamonds
+    | _ -> failwith "straight error"
   else if length hearts > 4 then
-    match straight_flush hearts with Some s -> Some s | None -> flush hearts
+    match straight_flush hearts with
+    | Some (Straight v) -> Some (StraightFlush v)
+    | None -> flush hearts
+    | _ -> failwith "straight error"
   else if length spades > 4 then
-    match straight_flush spades with Some s -> Some s | None -> flush spades
+    match straight_flush spades with
+    | Some (Straight v) -> Some (StraightFlush v)
+    | None -> flush spades
+    | _ -> failwith "straight error"
   else None
 
 let best_hand cards =
   let matches = best_matches cards in
-  let straight =
-    straight (sort_uniq (fun x y -> x.value - y.value) cards) 0 0
-  in
+  let straight = straight (sort_uniq (fun x y -> x.value - y.value) cards) in
   let flush = flush cards in
   match flush with
   | Some (StraightFlush v) -> StraightFlush v
@@ -580,7 +585,7 @@ let best_hand cards =
 let create_hands p_list board =
   map (fun x -> (x, best_hand (x.cards @ board))) p_list
 
-let rec compare_hands h1 h2 =
+let compare_hands h1 h2 =
   match h1 with
   | HighCard v1 -> ( match h2 with HighCard v2 -> v1 - v2 | _ -> -1)
   | Pair v1 -> ( match h2 with HighCard _ -> 1 | Pair v2 -> v1 - v2 | _ -> -1)
@@ -618,8 +623,9 @@ let rec compare_hands h1 h2 =
       | Quads _ -> -1
       | StraightFlush _ -> -1
       | _ -> 1)
-  | Quads _ -> ( match h2 with StraightFlush _ -> -1 | _ -> 1)
-  | StraightFlush _ -> 1
+  | Quads v1 -> (
+      match h2 with Quads v2 -> v1 - v2 | StraightFlush _ -> -1 | _ -> 1)
+  | StraightFlush v1 -> ( match h2 with StraightFlush v2 -> v1 - v2 | _ -> 1)
 
 let stand_off t =
   let rank_players =
@@ -627,24 +633,45 @@ let stand_off t =
       (fun x y -> match (x, y) with (_, h), (_, h') -> compare_hands h h')
       (create_hands t.players t.board)
   in
+  let best_hand =
+    match nth rank_players (length rank_players - 1) with _, h -> h
+  in
   let winners =
     filter
-      (fun x -> x = nth rank_players (length rank_players - 1))
+      (fun x -> match x with _, h -> compare_hands best_hand h = 0)
       rank_players
   in
-  {
-    players = map (fun x -> match x with p, _ -> p) winners @ [];
-    pot = t.pot;
-    current_bet = t.current_bet;
-    action = t.action;
-    board = t.board;
-    deck = t.deck;
-    small_blind = t.small_blind;
-    big_blind = t.big_blind;
-  }
+  let stand_off =
+    {
+      players = map (fun x -> match x with p, _ -> p) winners @ [];
+      pot = t.pot;
+      current_bet = t.current_bet;
+      action = t.action;
+      board = t.board;
+      deck = t.deck;
+      small_blind = t.small_blind;
+      big_blind = t.big_blind;
+    }
+  in
+  let winner stand_off =
+    List.map
+      (fun x ->
+        {
+          x with
+          money =
+            x.money +. (stand_off.pot /. float_of_int (length stand_off.players));
+        })
+      stand_off.players
+  in
+  { stand_off with players = winner stand_off }
 
-let show_board (t : table) = t.board
-let show_cards (t : table) = t.action.cards
+let show_money name t =
+  match List.filter (fun x -> x.name = name) t.players with
+  | [] -> failwith "invalid player"
+  | h :: _ -> h.money
+
+let show_board t = t.board
+let show_cards t = t.action.cards
 
 let check_game (t : table) =
   print_string ("pot: " ^ string_of_float t.pot);
@@ -652,19 +679,63 @@ let check_game (t : table) =
   print_string ("current bet: " ^ string_of_float t.current_bet);
   print_newline ();
   print_newline ();
-  List.map
-    (fun x ->
-      print_string ("player: " ^ x.name);
-      print_newline ();
-      print_string ("bet: " ^ string_of_float x.bet);
-      print_newline ();
-      print_string ("money: " ^ string_of_float x.money);
-      print_newline ();
-      print_newline ())
-    t.players
+  let _ =
+    List.map
+      (fun x ->
+        print_string ("player: " ^ x.name);
+        print_newline ();
+        print_string ("bet: " ^ string_of_float x.bet);
+        print_newline ();
+        print_string ("money: " ^ string_of_float x.money);
+        print_newline ();
+        print_newline ())
+      t.players
+  in
+  ()
 
-let winner stand_off =
-  List.map
-    (fun x ->
-      x.money = stand_off.pot /. float_of_int (length stand_off.players))
-    stand_off.players
+let winner_names stand_off = List.map (fun x -> x.name) stand_off.players
+
+let create_custom_card v suit =
+  let s =
+    match suit with
+    | 'c' -> Clubs
+    | 'd' -> Diamonds
+    | 'h' -> Hearts
+    | 's' -> Spades
+    | _ -> failwith "not a valid char"
+  in
+  let n =
+    match v with
+    | 2 -> "two"
+    | 3 -> "three"
+    | 4 -> "four"
+    | 5 -> "five"
+    | 6 -> "six"
+    | 7 -> "seven"
+    | 8 -> "eight"
+    | 9 -> "nine"
+    | 10 -> "ten"
+    | 11 -> "jack"
+    | 12 -> "queen"
+    | 13 -> "king"
+    | 14 -> "ace"
+    | _ -> failwith "not a valid int"
+  in
+  let card = { name = n; suit = s; value = v } in
+  assert (card.name = card.name);
+  card
+
+let create_custom_player n m c =
+  { name = n; cards = c; bet = 0.0; money = m; starting_pos = 0 }
+
+let create_custom_table p_list custom_board custom_pot custom_action =
+  {
+    players = p_list;
+    current_bet = 0.0;
+    board = custom_board;
+    pot = custom_pot;
+    action = custom_action;
+    deck = update_deck custom_board full_deck;
+    small_blind = 0.0;
+    big_blind = 0.0;
+  }

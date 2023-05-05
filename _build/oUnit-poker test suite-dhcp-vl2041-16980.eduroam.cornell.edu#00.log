@@ -1,0 +1,208 @@
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Runner: processes
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Chooser: simple
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration suite_name = "poker test suite"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration cache_filename = "/Users/jeffreyhong/cs3110/final-project/_build/oUnit-$(suite_name).cache"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration run_gc_full_major = "true"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration display = "true"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration results_style_1_X = "false"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration testdata_dir = "none"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration health_check_interval = "1."
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration verbose = "false"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration chooser = "simple"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration output_html_dir = "none"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration processes_kill_period = "5."
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration runner = "processes"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration shards = "2"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration processes_grace_period = "5."
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration log_encoding = "utf-8"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration output_junit_file = "none"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration ci = "false"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Configuration output_file = "/Users/jeffreyhong/cs3110/final-project/_build/oUnit-$(suite_name)-$(shard_id).log"
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Using 2 workers maximum.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Starting worker number dhcp-vl2041-16980.eduroam.cornell.edu#01.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-16980.eduroam.cornell.edu#01 started.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Starting worker number dhcp-vl2041-16980.eduroam.cornell.edu#02.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-16980.eduroam.cornell.edu#02 started.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:1:tie, poker test suite:0:high card.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:0:high card.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:1:tie, poker test suite:0:high card.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:1:tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:1:tie, poker test suite:0:high card.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:0:high card is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:1:tie, poker test suite:0:high card.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:0:high card.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:1:tie, poker test suite:0:high card.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:2:pair, poker test suite:1:tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:2:pair.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:2:pair, poker test suite:1:tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:2:pair is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:2:pair, poker test suite:1:tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:1:tie is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:2:pair.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:2:pair, poker test suite:1:tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:1:tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:3:two_pair, poker test suite:1:tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:4:trips, poker test suite:3:two_pair.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:3:two_pair.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:4:trips.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:4:trips, poker test suite:3:two_pair.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:3:two_pair is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:4:trips is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:4:trips, poker test suite:3:two_pair.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:3:two_pair.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:4:trips.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:4:trips, poker test suite:3:two_pair.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:6:straight low, poker test suite:5:straight.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:5:straight.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:6:straight low.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:6:straight low, poker test suite:5:straight.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:5:straight is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:6:straight low, poker test suite:5:straight.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:5:straight.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:6:straight low, poker test suite:5:straight.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:7:flush, poker test suite:6:straight low.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:6:straight low is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:7:flush.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:7:flush, poker test suite:6:straight low.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:6:straight low.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:7:flush is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:7:flush, poker test suite:6:straight low.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:7:flush.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:8:flush tie, poker test suite:7:flush.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:9:full house, poker test suite:8:flush tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:9:full house.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:9:full house, poker test suite:8:flush tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:8:flush tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:9:full house is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:9:full house, poker test suite:8:flush tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:8:flush tie is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:9:full house.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:9:full house, poker test suite:8:flush tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:8:flush tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:10:quads, poker test suite:8:flush tie.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:11:straight flush, poker test suite:10:quads.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:11:straight flush.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:11:straight flush, poker test suite:10:quads.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:10:quads.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:11:straight flush is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:11:straight flush, poker test suite:10:quads.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:10:quads is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:11:straight flush.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:11:straight flush, poker test suite:10:quads.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:10:quads.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:12:winnings for high card win distributed properly, poker test suite:10:quads.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:12:winnings for high card win distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:13:winnings for tie should be distributed properly, poker test suite:12:winnings for high card win distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:13:winnings for tie should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:13:winnings for tie should be distributed properly, poker test suite:12:winnings for high card win distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:12:winnings for high card win distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:13:winnings for tie should be distributed properly, poker test suite:12:winnings for high card win distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:12:winnings for high card win distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:13:winnings for tie should be distributed properly, poker test suite:12:winnings for high card win distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:14:winnings for a pair win should be distributed properly, poker test suite:13:winnings for tie should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:13:winnings for tie should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:14:winnings for a pair win should be distributed properly, poker test suite:13:winnings for tie should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:13:winnings for tie should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:14:winnings for a pair win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:14:winnings for a pair win should be distributed properly, poker test suite:13:winnings for tie should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:15:winnings for a two pair win should be distributed properly, poker test suite:14:winnings for a pair win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:15:winnings for a two pair win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:15:winnings for a two pair win should be distributed properly, poker test suite:14:winnings for a pair win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:14:winnings for a pair win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:15:winnings for a two pair win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:15:winnings for a two pair win should be distributed properly, poker test suite:14:winnings for a pair win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:14:winnings for a pair win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:15:winnings for a two pair win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:15:winnings for a two pair win should be distributed properly, poker test suite:14:winnings for a pair win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:17:winnings for a straight win should be distributed properly, poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:17:winnings for a straight win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:17:winnings for a straight win should be distributed properly, poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:17:winnings for a straight win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:17:winnings for a straight win should be distributed properly, poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:17:winnings for a straight win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:17:winnings for a straight win should be distributed properly, poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:18:winnings for a low straight win should be distributed properly, poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:18:winnings for a low straight win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:18:winnings for a low straight win should be distributed properly, poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:16:winnings for a trips win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:18:winnings for a low straight win should be distributed properly, poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:18:winnings for a low straight win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:18:winnings for a low straight win should be distributed properly, poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:18:winnings for a low straight win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:19:winnings for a flush win should be distributed properly, poker test suite:18:winnings for a low straight win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:20:winnings for a flush tie should be distributed properly, poker test suite:19:winnings for a flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:19:winnings for a flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:20:winnings for a flush tie should be distributed properly, poker test suite:19:winnings for a flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:20:winnings for a flush tie should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:20:winnings for a flush tie should be distributed properly, poker test suite:19:winnings for a flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:19:winnings for a flush win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:20:winnings for a flush tie should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:20:winnings for a flush tie should be distributed properly, poker test suite:19:winnings for a flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:19:winnings for a flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:20:winnings for a flush tie should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:20:winnings for a flush tie should be distributed properly, poker test suite:19:winnings for a flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:22:winnings for a quads win should be distributed properly, poker test suite:21:winnings for a full house win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Start test poker test suite:21:winnings for a full house win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:22:winnings for a quads win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:22:winnings for a quads win should be distributed properly, poker test suite:21:winnings for a full house win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: Test poker test suite:21:winnings for a full house win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:22:winnings for a quads win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:22:winnings for a quads win should be distributed properly, poker test suite:21:winnings for a full house win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#01 I: End test poker test suite:21:winnings for a full house win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:22:winnings for a quads win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 2 tests running: poker test suite:22:winnings for a quads win should be distributed properly, poker test suite:21:winnings for a full house win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Still 1 tests running : poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 1 tests running: poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Start test poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Still 1 tests running : poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 1 tests running: poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: Test poker test suite:23:winnings for a straight flush win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Still 1 tests running : poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 1 tests running: poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#02 I: End test poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Still 1 tests running : poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 1 tests running: poker test suite:23:winnings for a straight flush win should be distributed properly.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: 0 tests running: .
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-16980.eduroam.cornell.edu#01 has ended.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Worker dhcp-vl2041-16980.eduroam.cornell.edu#02 has ended.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Used 2 worker during test execution.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Run 12 tests with shard dhcp-vl2041-16980.eduroam.cornell.edu#01.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Run 12 tests with shard dhcp-vl2041-16980.eduroam.cornell.edu#02.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Check health of shard dhcp-vl2041-16980.eduroam.cornell.edu#01, 5 times.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Check health of shard dhcp-vl2041-16980.eduroam.cornell.edu#02, 1 times.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: ==============
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Summary:
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:23:winnings for a straight flush win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:22:winnings for a quads win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:21:winnings for a full house win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:20:winnings for a flush tie should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:19:winnings for a flush win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:18:winnings for a low straight win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:16:winnings for a trips win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:17:winnings for a straight win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:15:winnings for a two pair win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:14:winnings for a pair win should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:13:winnings for tie should be distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:12:winnings for high card win distributed properly is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:10:quads is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:11:straight flush is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:8:flush tie is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:9:full house is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:7:flush is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:6:straight low is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:5:straight is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:4:trips is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:3:two_pair is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:1:tie is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:2:pair is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Test poker test suite:0:high card is successful.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Ran: 24 tests in: 0.01 seconds.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Cases: 24.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Tried: 24.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Errors: 0.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Failures: 0.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Skip: 0.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Todo: 0.
+2023-05-05T19:01:21+00:00 dhcp-vl2041-16980.eduroam.cornell.edu#00 I: Timeout: 0.
