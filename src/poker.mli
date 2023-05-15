@@ -95,8 +95,8 @@ val get_players : table -> player list
 val get_player_name : player -> string
 (** returns the name of a player [p] *)
 
-val fold_status : table -> string -> bool
-(* returns the folded field of a given player give their name [n] *)
+val left_status : table -> string -> bool
+(** returns the left field of a given player give their name [n] *)
 
 val new_round : table -> table
 (** after round is finished, pass in the completed table state to restart 

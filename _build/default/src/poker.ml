@@ -874,7 +874,7 @@ let get_bet t n =
 let get_players t = t.players
 let get_player_name p = p.name
 
-let fold_status t n =
+let left_status t n =
   List.fold_left
     (fun acc x -> if x.name = n then x.left else acc)
     false t.players

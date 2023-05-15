@@ -566,7 +566,7 @@ let fold_test (name : string) (t : table) (expected_output : string * bool) :
   let old_action = turn t in
   let post_fold_table = fold t in
   assert_equal expected_output
-    (turn post_fold_table, fold_status post_fold_table old_action)
+    (turn post_fold_table, left_status post_fold_table old_action)
 
 let fold_tests =
   [

@@ -1,9 +1,9 @@
-# dune exec test/main.exe
+# dune build @doc
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Workspace root: /Users/elpatron/cs3110/Clone/cs3110-final-project
 # Auto-detected concurrency: 8
-$ /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/n0/038zn15d43q8dnrwknqw42m80000gn/T/dune_de9d81_output
+$ /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/n0/038zn15d43q8dnrwknqw42m80000gn/T/dune_e26152_output
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -118,6 +118,3 @@ $ /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlc.opt -config > /var/folders/n0/0
 #      ; windows_unicode = false
 #      }
 #  }
-$ (cd _build/default && /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I src/.poker.objs/byte -I src/.poker.objs/native -intf-suffix .ml -no-alias-deps -opaque -o src/.poker.objs/native/poker.cmx -c -impl src/poker.ml)
-$ (cd _build/default && /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o src/poker.cmxa src/.poker.objs/native/poker.cmx)
-$ (cd _build/default && /Users/elpatron/.opam/cs3110-2023sp/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/main.exe /Users/elpatron/.opam/cs3110-2023sp/lib/ocaml/str.cmxa -I /Users/elpatron/.opam/cs3110-2023sp/lib/ocaml /Users/elpatron/.opam/cs3110-2023sp/lib/ocaml/unix.cmxa -I /Users/elpatron/.opam/cs3110-2023sp/lib/ocaml src/poker.cmxa -I /Users/elpatron/.opam/cs3110-2023sp/lib/ocaml /Users/elpatron/.opam/cs3110-2023sp/lib/stdlib-shims/stdlib_shims.cmxa /Users/elpatron/.opam/cs3110-2023sp/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/elpatron/.opam/cs3110-2023sp/lib/ounit2/oUnit.cmxa test/.main.eobjs/native/dune__exe__Main.cmx)
