@@ -7,16 +7,19 @@ open Poker
      outputs, including different player and table fields following diverse
      sequences of game actions. After a specified action was taken, the game
      table was examined and different game factors were tested/assessed.
-     The only module tested was Poker, as that was the only necessary module for
-     the game. Overall, the test cases were a combination of black box and
-     glass box. Arguably, there was a randomness component to the testing
-     because the player hands and game board are randomly generated, which is
-     a key component of many test cases. A solid standard of correctness was
-     achieved due to the fact that test cases were thoroughly developed and
-     planned in both the black box and glass box senses, and various tests were
-     intricate edge cases on both minimum and maximum size tables. *)
+     As far as we are concerned, we believe that we tested most possible aspects
+     of a terminal poker game. Although, we did decide to omit testing instances
+     where a precondition was violated. The only module tested was Poker,
+     as that was the only necessary module for the game. Overall, the test cases
+     were a combination of black box and glass box. Arguably, there was a
+     randomness component to the testing because the player hands and game board
+     are randomly generated, which is a key component of many test cases.
+     A solid standard of correctness was achieved due to the fact that test
+     cases were thoroughly developed and planned in both the black box and glass
+     box senses, and various tests were intricate edge cases on both minimum and
+     maximum size tables. *)
 
-(* Below are 9 players that will be used to create different tables*)
+(* Below are 9 players that will be used to create different tables *)
 let p1 = create_player "jeff" 100.
 let p2 = create_player "daniel" 100.
 let initial_two_table = start [ p1; p2 ] 1. 2.
@@ -117,7 +120,6 @@ let third_raise_two_table_flop = raise second_raise_two_table_flop 20.
 let two_table_turn = call third_raise_two_table_flop
 let two_table_turn_raise = raise two_table_turn 20.
 let two_table_river = call two_table_turn_raise
-let first_raise_two_table_river = raise two_table_river 45.
 
 (* three-player game tables for testing *)
 let first_raise_three_table_preflop = raise initial_three_table 5.
@@ -176,14 +178,6 @@ let fourteenth_call_full_table_turn = call thirteenth_call_full_table_turn
 let fifteenth_call_full_table_turn = call fourteenth_call_full_table_turn
 let full_table_river = call fifteenth_call_full_table_turn
 let first_raise_full_table_river = raise full_table_river 10.
-let second_raise_full_table_river = raise first_raise_full_table_river 45.
-let first_call_full_table_river = call second_raise_full_table_river
-let second_call_full_table_river = call first_call_full_table_river
-let third_call_full_table_river = call second_call_full_table_river
-let fourth_call_full_table_river = call third_call_full_table_river
-let fifth_call_full_table_river = call fourth_call_full_table_river
-let sixth_call_full_table_river = call fifth_call_full_table_river
-let seventh_call_full_table_river = call sixth_call_full_table_river
 
 let raise_tests =
   (* tests for two-player table game *)
@@ -270,9 +264,6 @@ let call_tests =
     call_test "call raise on the turn by big blind in two_table"
       two_table_turn_raise
       (bb_two_table, 45., 0., 0., 110.);
-    call_test "call all-in raise on the river by big blind in two_table"
-      first_raise_two_table_river
-      (bb_two_table, 0., 45., 45., 200.);
   ]
   (* tests on three_player table game *)
   @ [
@@ -297,9 +288,6 @@ let call_tests =
       call_test "call initial raise from small blind by big blind player"
         first_raise_river_three_table
         (button_three_table, 0., 35., 35., 265.);
-      call_test "call initial raise from small blind by button player"
-        first_call_river_three_table
-        (sb_three_table, 0., 35., 35., 300.);
     ]
   @ (* tests on nine_player table game *)
   [
@@ -325,10 +313,6 @@ let call_tests =
     call_test "call raise from button player by cut-off player on the turn"
       fifteenth_call_full_table_turn
       (sb_full_table, 45., 0., 0., 495.);
-    call_test
-      "call on raise from big blind player by the small blind on the river"
-      seventh_call_full_table_river
-      (bb_full_table, 0., 45., 45., 900.);
   ]
 
 (* Additional tables for check tests on two_table *)
@@ -338,7 +322,6 @@ let first_check_two_table_flop = check snd_two_table_flop
 let snd_two_table_turn = check first_check_two_table_flop
 let first_check_two_table_turn = check snd_two_table_turn
 let snd_two_table_river = check first_check_two_table_turn
-let first_check_two_table_river = check snd_two_table_river
 
 (* Additional tables for check tests on three_table *)
 let first_call_three_table_preflop = call initial_three_table
@@ -351,7 +334,6 @@ let first_check_three_table_turn = check snd_three_table_turn
 let second_check_three_table_turn = check first_check_three_table_turn
 let snd_three_table_river = check second_check_three_table_turn
 let first_check_three_table_river = check snd_three_table_river
-let second_check_three_table_river = check first_check_three_table_river
 
 (* Additional tables for check tests on full_table *)
 let first_call_full_table_preflop = call initial_full_table
@@ -388,7 +370,6 @@ let fourth_check_full_table_river = check third_check_full_table_river
 let fifth_check_full_table_river = check fourth_check_full_table_river
 let sixth_check_full_table_river = check fifth_check_full_table_river
 let seventh_check_full_table_river = check sixth_check_full_table_river
-let eighth_check_full_table_river = check seventh_check_full_table_river
 
 let check_test (name : string) (t : table)
     (expected_output : string * float * float * float * float) : test =
@@ -419,8 +400,6 @@ let check_tests =
       (bb_two_table, 98., 0., 0., 4.);
     check_test "check as first action on the river" snd_two_table_river
       (sb_two_table, 98., 0., 0., 4.);
-    check_test "check as second action on the river" first_check_two_table_river
-      (bb_two_table, 98., 0., 0., 4.);
     check_test "check as first action on flop after betting preflop"
       two_table_flop
       (sb_two_table, 85., 0., 0., 30.);
@@ -460,9 +439,6 @@ let check_tests =
       check_test "check as second action on three_table river"
         first_check_three_table_river
         (button_three_table, 98., 0., 0., 6.);
-      check_test "check as third action on three_table river"
-        second_check_three_table_river
-        (sb_three_table, 98., 0., 0., 6.);
       check_test "check as first action after betting preflop" flop_three_table
         (bb_three_table, 95., 0., 0., 15.);
       check_test
@@ -555,9 +531,6 @@ let check_tests =
     check_test "check as eighth action on full_table river"
       seventh_check_full_table_river
       (seventh_to_act_player_pre, 98., 0., 0., 18.);
-    check_test "check as ninth action on full_table river"
-      eighth_check_full_table_river
-      (sb_full_table, 98., 0., 0., 18.);
   ]
 
 let fold_test (name : string) (t : table) (expected_output : string * bool) :

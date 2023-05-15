@@ -1,246 +1,234 @@
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:1:tie.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:1:tie is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:1:tie.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:3:two_pair.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:3:two_pair is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:3:two_pair.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:5:straight.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:5:straight is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:5:straight.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:7:flush.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:7:flush is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:7:flush.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:9:full house.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:9:full house is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:9:full house.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:11:straight flush.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:11:straight flush is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:11:straight flush.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:14:winnings for a pair win should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:14:winnings for a pair win should be distributed properly is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:14:winnings for a pair win should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:16:winnings for a trips win should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:16:winnings for a trips win should be distributed properly is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:16:winnings for a trips win should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:18:winnings for a low straight win should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:18:winnings for a low straight win should be distributed properly is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:18:winnings for a low straight win should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:20:winnings for a flush tie should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:20:winnings for a flush tie should be distributed properly is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:20:winnings for a flush tie should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:22:winnings for a quads win should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:22:winnings for a quads win should be distributed properly is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:22:winnings for a quads win should be distributed properly.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:24:two_table on player raise 5..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:24:two_table on player raise 5. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:24:two_table on player raise 5..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:26:two_table flop bet of 5..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:26:two_table flop bet of 5. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:26:two_table flop bet of 5..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:28:two_table flop re-raise 20..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:28:two_table flop re-raise 20. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:28:two_table flop re-raise 20..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:30:two_table all-in bet of 45.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:30:two_table all-in bet of 45 is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:30:two_table all-in bet of 45.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:32:three_table on raise 6.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:32:three_table on raise 6 is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:32:three_table on raise 6.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:34:three_table on raise 10..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:34:three_table on raise 10. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:34:three_table on raise 10..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:36:three_table on re-raise 40..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:36:three_table on re-raise 40. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:36:three_table on re-raise 40..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:37:three_table on all-in bet of 35..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:37:three_table on all-in bet of 35. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:37:three_table on all-in bet of 35..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:40:full_table on re-raise to 20..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:40:full_table on re-raise to 20. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:40:full_table on re-raise to 20..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:41:full_table on raise 5..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:41:full_table on raise 5. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:41:full_table on raise 5..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:44:full_table on raise 25..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:44:full_table on raise 25. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:44:full_table on raise 25..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:46:full_table on raise 20..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:46:full_table on raise 20. is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:46:full_table on raise 20..
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:47:call raise 5. by initial action in two_table.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:47:call raise 5. by initial action in two_table is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:47:call raise 5. by initial action in two_table.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:50:call raise on the turn by big blind in two_table.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:50:call raise on the turn by big blind in two_table is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:50:call raise on the turn by big blind in two_table.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:51:call all-in raise on the river by big blind in two_table.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:51:call all-in raise on the river by big blind in two_table is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:51:call all-in raise on the river by big blind in two_table.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:54:call re-raise from big blind by button player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:54:call re-raise from big blind by button player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:54:call re-raise from big blind by button player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:55:call re-raise from big_blind by small blind player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:55:call re-raise from big_blind by small blind player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:55:call re-raise from big_blind by small blind player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:58:call initial raise from small blind by big blind player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:58:call initial raise from small blind by big blind player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:58:call initial raise from small blind by big blind player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:59:call initial raise from small blind by button player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:59:call initial raise from small blind by button player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:59:call initial raise from small blind by button player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:61:call three-bet from third to act player by first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:61:call three-bet from third to act player by first to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:61:call three-bet from third to act player by first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:63:call initial from small blind by big blind on the flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:63:call initial from small blind by big blind on the flop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:63:call initial from small blind by big blind on the flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:65:call raise from button player by high-jack player on the turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:65:call raise from button player by high-jack player on the turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:65:call raise from button player by high-jack player on the turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:67:call on raise from big blind player by the small blind on the river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:67:call on raise from big blind player by the small blind on the river is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:67:call on raise from big blind player by the small blind on the river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:69:check as first action by big blind on flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:69:check as first action by big blind on flop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:69:check as first action by big blind on flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:71:check as first action on the turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:71:check as first action on the turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:71:check as first action on the turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:73:check as first action on the river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:73:check as first action on the river is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:73:check as first action on the river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:75:check as first action on flop after betting preflop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:75:check as first action on flop after betting preflop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:75:check as first action on flop after betting preflop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:77:check as first action after betting preflop, flop, and turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:77:check as first action after betting preflop, flop, and turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:77:check as first action after betting preflop, flop, and turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:79:check as first action on three_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:79:check as first action on three_table flop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:79:check as first action on three_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:81:check as third action on three_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:81:check as third action on three_table flop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:81:check as third action on three_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:83:check as second action on three_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:83:check as second action on three_table turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:83:check as second action on three_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:85:check as first action on three_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:85:check as first action on three_table river is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:85:check as first action on three_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:86:check as second action on three_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:86:check as second action on three_table river is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:86:check as second action on three_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:89:check as first action on the turn after betting preflop and flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:89:check as first action on the turn after betting preflop and flop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:89:check as first action on the turn after betting preflop and flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:90:check as first action on the river after betting preflop, flop, and turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:90:check as first action on the river after betting preflop, flop, and turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:90:check as first action on the river after betting preflop, flop, and turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:92:check as first action on full_table flop after betting preflop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:92:check as first action on full_table flop after betting preflop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:92:check as first action on full_table flop after betting preflop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:95:check as fourth action on full_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:95:check as fourth action on full_table flop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:95:check as fourth action on full_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:97:check as sixth action on full_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:97:check as sixth action on full_table flop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:97:check as sixth action on full_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:98:check as seventh action on full_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:98:check as seventh action on full_table flop is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:98:check as seventh action on full_table flop.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:101:check as first action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:101:check as first action on full_table turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:101:check as first action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:102:check as second action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:102:check as second action on full_table turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:102:check as second action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:104:check as fourth action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:104:check as fourth action on full_table turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:104:check as fourth action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:107:check as seventh action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:107:check as seventh action on full_table turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:107:check as seventh action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:108:check as eighth action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:108:check as eighth action on full_table turn is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:108:check as eighth action on full_table turn.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:110:check as first action on full_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:110:check as first action on full_table river is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:110:check as first action on full_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:112:check as third action on full_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:112:check as third action on full_table river is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:112:check as third action on full_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:114:check as fifth action on full_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:114:check as fifth action on full_table river is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:114:check as fifth action on full_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:117:check as eighth action on full_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:117:check as eighth action on full_table river is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:117:check as eighth action on full_table river.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:119:preflop fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:119:preflop fold of first to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:119:preflop fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:121:preflop fold of last to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:121:preflop fold of last to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:121:preflop fold of last to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:123:flop fold of second to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:123:flop fold of second to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:123:flop fold of second to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:124:flop fold of last to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:124:flop fold of last to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:124:flop fold of last to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:126:turn fold of second to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:126:turn fold of second to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:126:turn fold of second to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:128:river fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:128:river fold of first to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:128:river fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:131:preflop fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:131:preflop fold of first to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:131:preflop fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:132:preflop fold of second to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:132:preflop fold of second to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:132:preflop fold of second to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:135:preflop fold of fifth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:135:preflop fold of fifth to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:135:preflop fold of fifth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:137:preflop fold of seventh to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:137:preflop fold of seventh to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:137:preflop fold of seventh to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:138:preflop fold of small blind player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:138:preflop fold of small blind player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:138:preflop fold of small blind player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:140:flop fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:140:flop fold of first to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:140:flop fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:143:flop fold of fourth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:143:flop fold of fourth to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:143:flop fold of fourth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:145:flop fold of sixth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:145:flop fold of sixth to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:145:flop fold of sixth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:147:flop fold of eighth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:147:flop fold of eighth to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:147:flop fold of eighth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:148:turn fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:148:turn fold of first to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:148:turn fold of first to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:151:turn fold of fourth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:151:turn fold of fourth to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:151:turn fold of fourth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:152:turn fold of fifth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:152:turn fold of fifth to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:152:turn fold of fifth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:155:turn fold of eighth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:155:turn fold of eighth to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:155:turn fold of eighth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:157:river fold of second to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:157:river fold of second to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:157:river fold of second to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:158:river fold of third to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:158:river fold of third to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:158:river fold of third to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:161:river fold of sixth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:161:river fold of sixth to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:161:river fold of sixth to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:162:river fold of seventh to act player.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:162:river fold of seventh to act player is successful.
-2023-05-15T00:26:13+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:162:river fold of seventh to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:1:tie.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:1:tie is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:1:tie.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:3:two_pair.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:3:two_pair is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:3:two_pair.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:5:straight.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:5:straight is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:5:straight.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:8:flush tie.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:8:flush tie is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:8:flush tie.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:10:quads.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:10:quads is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:10:quads.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:12:winnings for high card win distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:12:winnings for high card win distributed properly is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:12:winnings for high card win distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:14:winnings for a pair win should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:14:winnings for a pair win should be distributed properly is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:14:winnings for a pair win should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:16:winnings for a trips win should be distributed properly is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:16:winnings for a trips win should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:18:winnings for a low straight win should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:18:winnings for a low straight win should be distributed properly is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:18:winnings for a low straight win should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:20:winnings for a flush tie should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:20:winnings for a flush tie should be distributed properly is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:20:winnings for a flush tie should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:22:winnings for a quads win should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:22:winnings for a quads win should be distributed properly is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:22:winnings for a quads win should be distributed properly.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:24:two_table on player raise 5..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:24:two_table on player raise 5. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:24:two_table on player raise 5..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:26:two_table flop bet of 5..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:26:two_table flop bet of 5. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:26:two_table flop bet of 5..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:28:two_table flop re-raise 20..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:28:two_table flop re-raise 20. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:28:two_table flop re-raise 20..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:30:two_table all-in bet of 45.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:30:two_table all-in bet of 45 is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:30:two_table all-in bet of 45.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:32:three_table on raise 6.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:32:three_table on raise 6 is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:32:three_table on raise 6.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:34:three_table on raise 10..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:34:three_table on raise 10. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:34:three_table on raise 10..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:36:three_table on re-raise 40..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:36:three_table on re-raise 40. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:36:three_table on re-raise 40..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:39:full_table on re-raise to 10..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:39:full_table on re-raise to 10. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:39:full_table on re-raise to 10..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:40:full_table on re-raise to 20..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:40:full_table on re-raise to 20. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:40:full_table on re-raise to 20..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:43:full_table on raise 10..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:43:full_table on raise 10. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:43:full_table on raise 10..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:45:full_table on raise 10..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:45:full_table on raise 10. is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:45:full_table on raise 10..
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:47:call raise 5. by initial action in two_table.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:47:call raise 5. by initial action in two_table is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:47:call raise 5. by initial action in two_table.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:49:call second re-raise on flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:49:call second re-raise on flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:49:call second re-raise on flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:51:call initial raise from button player by small blind.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:51:call initial raise from button player by small blind is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:51:call initial raise from button player by small blind.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:53:call re-raise from big blind by button player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:53:call re-raise from big blind by button player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:53:call re-raise from big blind by button player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:55:call three bet from button by small blind player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:55:call three bet from button by small blind player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:55:call three bet from button by small blind player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:57:call initial raise from small blind by big blind player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:57:call initial raise from small blind by big blind player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:57:call initial raise from small blind by big blind player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:59:call three-bet from third to act player by first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:59:call three-bet from third to act player by first to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:59:call three-bet from third to act player by first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:61:call initial from small blind by big blind on the flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:61:call initial from small blind by big blind on the flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:61:call initial from small blind by big blind on the flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:63:call raise from button player by high-jack player on the turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:63:call raise from button player by high-jack player on the turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:63:call raise from button player by high-jack player on the turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:65:check on initial two_table after small blind call preflop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:65:check on initial two_table after small blind call preflop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:65:check on initial two_table after small blind call preflop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:67:check as second action by small blind on flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:67:check as second action by small blind on flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:67:check as second action by small blind on flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:69:check as second action on the turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:69:check as second action on the turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:69:check as second action on the turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:71:check as first action on flop after betting preflop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:71:check as first action on flop after betting preflop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:71:check as first action on flop after betting preflop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:73:check as first action after betting preflop, flop, and turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:73:check as first action after betting preflop, flop, and turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:73:check as first action after betting preflop, flop, and turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:75:check as first action on three_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:75:check as first action on three_table flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:75:check as first action on three_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:77:check as third action on three_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:77:check as third action on three_table flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:77:check as third action on three_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:79:check as second action on three_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:79:check as second action on three_table turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:79:check as second action on three_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:81:check as first action on three_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:81:check as first action on three_table river is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:81:check as first action on three_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:83:check as first action after betting preflop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:83:check as first action after betting preflop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:83:check as first action after betting preflop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:85:check as first action on the river after betting preflop, flop, and turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:85:check as first action on the river after betting preflop, flop, and turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:85:check as first action on the river after betting preflop, flop, and turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:86:check as last action preflop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:86:check as last action preflop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:86:check as last action preflop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:88:check as second action on full_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:88:check as second action on full_table flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:88:check as second action on full_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:91:check as fifth action on full_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:91:check as fifth action on full_table flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:91:check as fifth action on full_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:92:check as sixth action on full_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:92:check as sixth action on full_table flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:92:check as sixth action on full_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:95:check as ninth action on full_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:95:check as ninth action on full_table flop is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:95:check as ninth action on full_table flop.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:97:check as second action on full_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:97:check as second action on full_table turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:97:check as second action on full_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:99:check as fourth action on full_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:99:check as fourth action on full_table turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:99:check as fourth action on full_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:100:check as fifth action on full_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:100:check as fifth action on full_table turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:100:check as fifth action on full_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:103:check as eighth action on full_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:103:check as eighth action on full_table turn is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:103:check as eighth action on full_table turn.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:105:check as first action on full_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:105:check as first action on full_table river is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:105:check as first action on full_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:107:check as third action on full_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:107:check as third action on full_table river is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:107:check as third action on full_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:109:check as fifth action on full_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:109:check as fifth action on full_table river is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:109:check as fifth action on full_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:111:check as seventh action on full_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:111:check as seventh action on full_table river is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:111:check as seventh action on full_table river.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:113:preflop fold of first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:113:preflop fold of first to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:113:preflop fold of first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:115:preflop fold of last to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:115:preflop fold of last to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:115:preflop fold of last to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:117:flop fold of second to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:117:flop fold of second to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:117:flop fold of second to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:119:turn fold of first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:119:turn fold of first to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:119:turn fold of first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:121:turn fold of last to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:121:turn fold of last to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:121:turn fold of last to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:123:river fold of second to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:123:river fold of second to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:123:river fold of second to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:125:preflop fold of first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:125:preflop fold of first to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:125:preflop fold of first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:127:preflop fold of third to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:127:preflop fold of third to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:127:preflop fold of third to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:129:preflop fold of fifth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:129:preflop fold of fifth to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:129:preflop fold of fifth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:131:preflop fold of seventh to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:131:preflop fold of seventh to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:131:preflop fold of seventh to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:133:preflop fold of big blind player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:133:preflop fold of big blind player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:133:preflop fold of big blind player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:135:flop fold of second to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:135:flop fold of second to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:135:flop fold of second to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:137:flop fold of fourth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:137:flop fold of fourth to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:137:flop fold of fourth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:139:flop fold of sixth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:139:flop fold of sixth to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:139:flop fold of sixth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:141:flop fold of eighth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:141:flop fold of eighth to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:141:flop fold of eighth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:142:turn fold of first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:142:turn fold of first to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:142:turn fold of first to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:145:turn fold of fourth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:145:turn fold of fourth to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:145:turn fold of fourth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:146:turn fold of fifth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:146:turn fold of fifth to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:146:turn fold of fifth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:149:turn fold of eighth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:149:turn fold of eighth to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:149:turn fold of eighth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:151:river fold of second to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:151:river fold of second to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:151:river fold of second to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:152:river fold of third to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:152:river fold of third to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:152:river fold of third to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:155:river fold of sixth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:155:river fold of sixth to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:155:river fold of sixth to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Start test poker test suite:156:river fold of seventh to act player.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: Test poker test suite:156:river fold of seventh to act player is successful.
+2023-05-15T06:27:52+00:00 dhcp-vl2041-20968.eduroam.cornell.edu#02 I: End test poker test suite:156:river fold of seventh to act player.

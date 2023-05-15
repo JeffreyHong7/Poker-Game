@@ -10,7 +10,7 @@ type table
 (** the abstract type representing the table or the game state *)
 
 exception PlayerSize
-(** raised if invalid number of players n<2 or n>10 *)
+(** raised if invalid number of players n < 2 or n > 9 *)
 
 val create_player : string -> float -> player
 (** [create_player n m] creates a player with name n with m money.
@@ -22,7 +22,7 @@ val start : player list -> float -> float -> table
       table is assigned a card and the player with the highest card is 
       positioned as button, small blind, or big blind. 
       Raises an exception PlayerSize if player size is less than 2 or greater 
-         than 10 *)
+         than 9 *)
 
 val assign_cards : table -> table
 (** Each player in table will receive their cards. Requires: no player has
@@ -34,20 +34,6 @@ val pot_size : table -> float
 val turn : table -> string
 (** returns the name of the player that needs to act *)
 
-val raise : table -> float -> table
-(** raises the action player's bet for the current round *)
-
-val find_next_player : table -> player
-
-val check : table -> table
-(** does nothing, moves action to the next player *)
-
-val fold : table -> table
-(** removes the player folding from the current round *)
-
-val call : table -> table
-(** matches the bet of the player whose turn it is to the table's current bet*)
-
 val deal_cards : table -> table
 (** deals the cards for the table, removes from deck *)
 
@@ -58,11 +44,26 @@ val stand_off : table -> table
 val winner_names : table -> string list
 (** returns the names of the winners with their updated money*)
 
+val raise : table -> float -> table
+(** raises the action player's bet for the current round *)
+
+val find_next_player : table -> player
+(** given a table [t], [find_next_player t] returns the next player to act *)
+
+val check : table -> table
+(** does nothing, moves action to the next player *)
+
+val fold : table -> table
+(** removes the player folding from the current round *)
+
+val call : table -> table
+(** matches the bet of the player whose turn it is to the table's current bet*)
+
 val show_money : string -> table -> float
 (** [show_money name table] returns the amount of money that a player in table
       whose name matches the name argument has *)
 
-val show_board : table -> card list
+val show_board : table -> unit
 (** prints the current board of the game *)
 
 val show_cards : table -> unit
