@@ -1,0 +1,6 @@
+description = ""
+requires = "str unix"
+archive(byte) = "poker.cma"
+archive(native) = "poker.cmxa"
+plugin(byte) = "poker.cma"
+plugin(native) = "poker.cmxs"

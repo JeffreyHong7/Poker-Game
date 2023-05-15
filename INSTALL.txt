@@ -1,0 +1,5 @@
+Follow textook instructions for Installing OCaml and VSCode here: 
+https://cs3110.github.io/textbook/chapters/preface/install.html
+(no additional installations required for this project)
+If any issues arise from incompatible OS systems follow these instructions:
+https://cs3110.github.io/textbook/chapters/appendix/vm.html

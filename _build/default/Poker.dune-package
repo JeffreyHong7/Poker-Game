@@ -1,0 +1,33 @@
+(lang dune 3.7)
+(name Poker)
+(sections (lib .) (libexec .) (doc ../../doc/Poker))
+(files
+ (lib
+  (META
+   dune-package
+   opam
+   poker.a
+   poker.cma
+   poker.cmi
+   poker.cmt
+   poker.cmti
+   poker.cmx
+   poker.cmxa
+   poker.ml
+   poker.mli))
+ (libexec (poker.cmxs))
+ (doc (README.md)))
+(library
+ (name Poker)
+ (kind normal)
+ (archives (byte poker.cma) (native poker.cmxa))
+ (plugins (byte poker.cma) (native poker.cmxs))
+ (native_archives poker.a)
+ (requires str unix)
+ (main_module_name Poker)
+ (modes byte native)
+ (modules
+  (singleton
+   (obj_name poker)
+   (visibility public)
+   (source (path Poker) (intf (path poker.mli)) (impl (path poker.ml))))))

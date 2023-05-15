@@ -12,6 +12,7 @@ type player = {
   bet : float;
   money : float;
   starting_pos : int;
+  left : bool;
 }
 
 type table = {
@@ -68,8 +69,8 @@ let full_deck =
   @ create_deck card_info Clubs
   @ []
 
-let create_player n m =
-  { name = n; cards = []; bet = 0.; money = m; starting_pos = 0 }
+let create_player n m : player =
+  { name = n; cards = []; bet = 0.; money = m; starting_pos = 0; left = false }
 
 (* helper methods for start *)
 let rec num_players = function [] -> 0 | _ :: t -> 1 + num_players t
@@ -90,6 +91,7 @@ let rec blind_assign p_list s b =
           bet = b;
           money = h.money -. b;
           starting_pos = h.starting_pos;
+          left = h.left;
         }
         :: blind_assign t s b
       else if tl t = [] then
@@ -99,6 +101,7 @@ let rec blind_assign p_list s b =
           bet = s;
           money = h.money -. s;
           starting_pos = h.starting_pos;
+          left = h.left;
         }
         :: blind_assign t s b
       else h :: blind_assign t s b
@@ -115,6 +118,7 @@ let player_list_update lst s b =
           bet = x.bet;
           money = x.money;
           starting_pos = rand_num;
+          left = x.left;
         })
       lst
   in
@@ -140,6 +144,7 @@ let rec update_player_cards p_list d =
           bet = h.bet;
           money = h.money;
           starting_pos = h.starting_pos;
+          left = h.left;
         };
       ]
       @ update_player_cards t
@@ -170,18 +175,21 @@ let start p_list s b =
   let length = num_players p_list in
   if length >= 2 && length <= 10 then
     let new_player_list = player_list_update p_list s b in
-    assign_cards
-      {
-        players = new_player_list;
-        current_bet = b;
-        pot = s +. b;
-        board = [];
-        action =
-          (match new_player_list with h :: _ -> h | _ -> raise PlayerSize);
-        deck = full_deck;
-        small_blind = s;
-        big_blind = b;
-      }
+    let table =
+      assign_cards
+        {
+          players = map (fun x -> { x with left = false }) new_player_list;
+          current_bet = b;
+          pot = s +. b;
+          board = [];
+          action =
+            (match new_player_list with h :: _ -> h | _ -> raise PlayerSize);
+          deck = full_deck;
+          small_blind = s;
+          big_blind = b;
+        }
+    in
+    { table with action = hd table.players }
   else raise PlayerSize
 
 let deal_cards t =
@@ -241,6 +249,7 @@ let rec restore_bets p_list =
         bet = 0.;
         money = h.money;
         starting_pos = h.starting_pos;
+        left = h.left;
       }
       :: restore_bets t
 
@@ -256,20 +265,51 @@ let rec post_flop_order table p_list =
      in
      if length lst = 2 then rev lst else lst)
 
-let check_flop t =
-  let big_blind = last_to_act t.players in
+let rec first_not_folded = function
+  | [] -> failwith "no such player"
+  | h :: t -> if not h.left then h else first_not_folded t
+
+let rec not_folded_players = function
+  | [] -> []
+  | h :: t ->
+      if not h.left then h :: not_folded_players t else not_folded_players t
+
+let rec find_next_helper table lst =
+  match lst with
+  | [] -> failwith "no player"
+  | h :: t ->
+      if h.name = table.action.name then
+        match t with
+        | [] ->
+            if not (hd table.players).left then hd table.players
+            else first_not_folded table.players
+        | h' :: t' -> (
+            if not h'.left then h'
+            else
+              try first_not_folded t'
+              with Failure _ -> (
+                try first_not_folded table.players
+                with Failure m -> failwith m))
+      else find_next_helper table t
+
+let find_next_player t = find_next_helper t t.players
+
+let check_flop t p =
+  let last = last_to_act p in
   if
     length t.board <> 0
-    || (for_all (fun x -> x.bet = t.big_blind) t.players && t.action = big_blind)
+    || (for_all (fun x -> x.bet = t.big_blind) p && t.action = last)
   then t
-  else if for_all (fun x -> x.bet = t.current_bet) t.players then
+  else if for_all (fun x -> x.bet = t.current_bet) p then
     let table = deal_cards t in
     {
       players = post_flop_order t t.players;
       pot = t.pot;
       current_bet = 0.;
       board = table.board;
-      action = hd (post_flop_order t t.players);
+      action =
+        (let order = post_flop_order t t.players in
+         if not (hd order).left then hd order else first_not_folded order);
       deck = table.deck;
       small_blind = t.small_blind;
       big_blind = t.big_blind;
@@ -277,14 +317,15 @@ let check_flop t =
   else t
 
 let check_turn t =
-  if for_all (fun x -> x.bet = t.current_bet) t.players then
+  let not_folded = not_folded_players t.players in
+  if for_all (fun x -> x.bet = t.current_bet) not_folded then
     let table = deal_cards t in
     {
-      players = t.players;
+      players = restore_bets t.players;
       current_bet = 0.;
       pot = t.pot;
       board = table.board;
-      action = hd t.players;
+      action = hd (not_folded_players (restore_bets t.players));
       deck = table.deck;
       small_blind = t.small_blind;
       big_blind = t.big_blind;
@@ -292,14 +333,15 @@ let check_turn t =
   else t
 
 let check_river t =
-  if for_all (fun x -> x.bet = t.current_bet) t.players then
+  let not_folded = not_folded_players t.players in
+  if for_all (fun x -> x.bet = t.current_bet) not_folded then
     let table = deal_cards t in
     {
-      players = t.players;
+      players = restore_bets t.players;
       current_bet = 0.;
       pot = t.pot;
       board = table.board;
-      action = hd t.players;
+      action = hd (not_folded_players (restore_bets t.players));
       deck = table.deck;
       small_blind = t.small_blind;
       big_blind = t.big_blind;
@@ -308,16 +350,6 @@ let check_river t =
 
 let pot_size t = t.pot
 let turn t = t.action.name
-
-let rec find_next_helper table lst =
-  match lst with
-  | [] -> failwith "no player"
-  | h :: t ->
-      if h.name = table.action.name then
-        match t with h' :: _ -> h' | [] -> hd table.players
-      else find_next_helper table t
-
-let find_next_player t = find_next_helper t t.players
 
 let raise t a =
   let post_action_table =
@@ -333,12 +365,13 @@ let raise t a =
                     name = x.name;
                     cards = x.cards;
                     bet = a;
-                    money = x.money -. a;
+                    money = x.money -. (a -. x.bet);
                     starting_pos = x.starting_pos;
+                    left = x.left;
                   };
                 ])
           [] t.players;
-      pot = t.pot +. a;
+      pot = t.pot +. (a -. t.action.bet);
       current_bet = a;
       board = t.board;
       action = find_next_player t;
@@ -347,19 +380,22 @@ let raise t a =
       big_blind = t.big_blind;
     }
   in
-  let no_bets = for_all (fun x -> x.bet = 0.) t.players in
+  let not_folded = not_folded_players t.players in
+  let no_bets = for_all (fun x -> x.bet = 0.) not_folded in
   match length t.board with
-  | 0 -> check_flop post_action_table
+  | 0 ->
+      check_flop post_action_table
+        (not_folded_players post_action_table.players)
   | 3 ->
-      if no_bets && post_action_table.action = hd t.players then
+      if no_bets && post_action_table.action = hd not_folded then
         check_turn post_action_table
-      else if no_bets && post_action_table.action <> hd t.players then
+      else if no_bets && post_action_table.action <> hd not_folded then
         post_action_table
       else check_turn post_action_table
   | 4 ->
-      if no_bets && post_action_table.action = hd t.players then
+      if no_bets && post_action_table.action = hd not_folded then
         check_river post_action_table
-      else if no_bets && post_action_table.action <> hd t.players then
+      else if no_bets && post_action_table.action <> hd not_folded then
         post_action_table
       else check_river post_action_table
   | _ -> post_action_table
@@ -380,52 +416,80 @@ let check t =
     else
       failwith ("Cannot check. " ^ t.action.name ^ " must fold, call, or raise.")
   in
+  let not_folded = not_folded_players t.players in
   let no_bets = for_all (fun x -> x.bet = 0.) t.players in
   match length t.board with
-  | 0 -> check_flop post_action_table
+  | 0 ->
+      check_flop post_action_table
+        (not_folded_players post_action_table.players)
   | 3 ->
-      if no_bets && post_action_table.action = hd t.players then
+      if no_bets && post_action_table.action = hd not_folded then
         check_turn post_action_table
-      else if no_bets && post_action_table.action <> hd t.players then
+      else if no_bets && post_action_table.action <> hd not_folded then
         post_action_table
       else check_turn post_action_table
   | 4 ->
-      if no_bets && post_action_table.action = hd t.players then
+      if no_bets && post_action_table.action = hd not_folded then
         check_river post_action_table
-      else if no_bets && post_action_table.action <> hd t.players then
+      else if no_bets && post_action_table.action <> hd not_folded then
         post_action_table
       else check_river post_action_table
   | _ -> post_action_table
 
 let fold t =
+  let p =
+    map
+      (fun x -> if x.name = t.action.name then { x with left = true } else x)
+      t.players
+  in
   let post_action_table =
     {
-      players = filter (fun x -> x <> t.action) t.players;
+      players = p;
       pot = t.pot;
       current_bet = t.current_bet;
-      action = find_next_player t;
+      action = find_next_player { t with players = p };
       board = t.board;
       deck = t.deck;
       small_blind = t.small_blind;
       big_blind = t.big_blind;
     }
   in
-  let no_bets = for_all (fun x -> x.bet = 0.) t.players in
-  match length t.board with
-  | 0 -> check_flop post_action_table
-  | 3 ->
-      if no_bets && post_action_table.action = hd t.players then
-        check_turn post_action_table
-      else if no_bets && post_action_table.action <> hd t.players then
-        post_action_table
-      else check_turn post_action_table
-  | 4 ->
-      if no_bets && post_action_table.action = hd t.players then
-        check_river post_action_table
-      else if no_bets && post_action_table.action <> hd t.players then
-        post_action_table
-      else check_river post_action_table
-  | _ -> post_action_table
+  let not_folded = not_folded_players post_action_table.players in
+  let possible_winner =
+    if length not_folded < 2 then
+      let updated_players =
+        List.map
+          (fun x ->
+            if List.exists (fun a -> x = a) not_folded then
+              { x with money = x.money +. post_action_table.pot }
+            else x)
+          post_action_table.players
+      in
+      { post_action_table with players = updated_players }
+    else post_action_table
+  in
+  if possible_winner <> post_action_table then (
+    print_string ("Round over. Winner is " ^ (hd not_folded).name);
+    possible_winner)
+  else
+    let no_bets = for_all (fun x -> x.bet = 0.) t.players in
+    match length t.board with
+    | 0 ->
+        check_flop post_action_table
+          (not_folded_players post_action_table.players)
+    | 3 ->
+        if no_bets && post_action_table.action = hd not_folded then
+          check_turn post_action_table
+        else if no_bets && post_action_table.action <> hd not_folded then
+          post_action_table
+        else check_turn post_action_table
+    | 4 ->
+        if no_bets && post_action_table.action = hd not_folded then
+          check_river post_action_table
+        else if no_bets && post_action_table.action <> hd not_folded then
+          post_action_table
+        else check_river post_action_table
+    | _ -> post_action_table
 
 let rec call_helper t lst =
   match lst with
@@ -435,9 +499,15 @@ let rec call_helper t lst =
         {
           name = h.name;
           cards = h.cards;
-          bet = t.current_bet;
-          money = h.money -. (t.current_bet -. h.bet);
+          bet =
+            (if t.current_bet > t.action.money +. t.action.bet then
+             t.action.money +. t.action.bet
+            else t.current_bet);
+          money =
+            (if t.current_bet > t.action.money +. t.action.bet then 0.
+            else t.action.money -. (t.current_bet -. t.action.bet));
           starting_pos = h.starting_pos;
+          left = h.left;
         }
         :: call_helper t tl
       else h :: call_helper t tl
@@ -446,7 +516,10 @@ let call t =
   let post_action_table =
     {
       players = call_helper t t.players;
-      pot = t.pot +. (t.current_bet -. t.action.bet);
+      pot =
+        (if t.current_bet > t.action.money +. t.action.bet then
+         t.pot +. (t.action.money +. t.action.bet)
+        else t.pot +. (t.current_bet -. t.action.bet));
       current_bet = t.current_bet;
       action =
         find_next_player
@@ -466,19 +539,22 @@ let call t =
       big_blind = t.big_blind;
     }
   in
+  let not_folded = not_folded_players t.players in
   let no_bets = for_all (fun x -> x.bet = 0.) t.players in
   match length t.board with
-  | 0 -> check_flop post_action_table
+  | 0 ->
+      check_flop post_action_table
+        (not_folded_players post_action_table.players)
   | 3 ->
-      if no_bets && post_action_table.action = hd t.players then
+      if no_bets && post_action_table.action = hd not_folded then
         check_turn post_action_table
-      else if no_bets && post_action_table.action <> hd t.players then
+      else if no_bets && post_action_table.action <> hd not_folded then
         post_action_table
       else check_turn post_action_table
   | 4 ->
-      if no_bets && post_action_table.action = hd t.players then
+      if no_bets && post_action_table.action = hd not_folded then
         check_river post_action_table
-      else if no_bets && post_action_table.action <> hd t.players then
+      else if no_bets && post_action_table.action <> hd not_folded then
         post_action_table
       else check_river post_action_table
   | _ -> post_action_table
@@ -637,13 +713,18 @@ let stand_off t =
     match nth rank_players (length rank_players - 1) with _, h -> h
   in
   let winners =
-    filter
-      (fun x -> match x with _, h -> compare_hands best_hand h = 0)
+    map
+      (fun x ->
+        match x with
+        | p, h ->
+            if compare_hands best_hand h <> 0 && Bool.not p.left then
+              { p with left = true }
+            else p)
       rank_players
   in
   let stand_off =
     {
-      players = map (fun x -> match x with p, _ -> p) winners @ [];
+      players = winners;
       pot = t.pot;
       current_bet = t.current_bet;
       action = t.action;
@@ -653,25 +734,66 @@ let stand_off t =
       big_blind = t.big_blind;
     }
   in
-  let winner stand_off =
+  let number_of_winners =
+    List.fold_left
+      (fun acc x -> if x.left then acc else acc + 1)
+      0 stand_off.players
+  in
+  let winnings =
     List.map
       (fun x ->
-        {
-          x with
-          money =
-            x.money +. (stand_off.pot /. float_of_int (length stand_off.players));
-        })
+        if x.left = false then
+          {
+            x with
+            money = x.money +. (stand_off.pot /. float_of_int number_of_winners);
+          }
+        else x)
       stand_off.players
   in
-  { stand_off with players = winner stand_off }
+  { stand_off with players = winnings; pot = 0.0 }
 
 let show_money name t =
   match List.filter (fun x -> x.name = name) t.players with
   | [] -> failwith "invalid player"
   | h :: _ -> h.money
 
-let show_board t = t.board
-let show_cards t = t.action.cards
+let show_board (t : table) = t.board
+
+let rec show_cards_helper l =
+  match l with
+  | [] -> ()
+  | h :: t -> (
+      match h.suit with
+      | Hearts ->
+          print_string h.name;
+          print_newline ();
+          print_string "hearts";
+          print_newline ();
+          print_newline ();
+          show_cards_helper t
+      | Spades ->
+          print_string h.name;
+          print_newline ();
+          print_string "spades";
+          print_newline ();
+          print_newline ();
+          show_cards_helper t
+      | Clubs ->
+          print_string h.name;
+          print_newline ();
+          print_string "clubs";
+          print_newline ();
+          print_newline ();
+          show_cards_helper t
+      | Diamonds ->
+          print_string h.name;
+          print_newline ();
+          print_string "diamonds";
+          print_newline ();
+          print_newline ();
+          show_cards_helper t)
+
+let show_cards (t : table) = show_cards_helper t.action.cards
 
 let check_game (t : table) =
   print_string ("pot: " ^ string_of_float t.pot);
@@ -679,21 +801,23 @@ let check_game (t : table) =
   print_string ("current bet: " ^ string_of_float t.current_bet);
   print_newline ();
   print_newline ();
-  let _ =
-    List.map
-      (fun x ->
-        print_string ("player: " ^ x.name);
-        print_newline ();
-        print_string ("bet: " ^ string_of_float x.bet);
-        print_newline ();
-        print_string ("money: " ^ string_of_float x.money);
-        print_newline ();
-        print_newline ())
-      t.players
-  in
-  ()
+  print_string ("action: " ^ t.action.name);
+  print_newline ();
+  print_newline ();
+  List.map
+    (fun x ->
+      print_string ("player: " ^ x.name);
+      print_newline ();
+      print_string ("bet: " ^ string_of_float x.bet);
+      print_newline ();
+      print_string ("money: " ^ string_of_float x.money);
+      print_newline ();
+      print_newline ())
+    t.players
 
-let winner_names stand_off = List.map (fun x -> x.name) stand_off.players
+let winner_names stand_off =
+  let winners = List.filter (fun x -> Bool.not x.left) stand_off.players in
+  List.map (fun x -> x.name) winners
 
 let create_custom_card v suit =
   let s =
@@ -726,7 +850,7 @@ let create_custom_card v suit =
   card
 
 let create_custom_player n m c =
-  { name = n; cards = c; bet = 0.0; money = m; starting_pos = 0 }
+  { name = n; cards = c; bet = 0.0; money = m; starting_pos = 0; left = false }
 
 let create_custom_table p_list custom_board custom_pot custom_action =
   {
@@ -739,3 +863,22 @@ let create_custom_table p_list custom_board custom_pot custom_action =
     small_blind = 0.0;
     big_blind = 0.0;
   }
+
+let get_current_bet t = t.current_bet
+
+let get_bet t n =
+  List.fold_left
+    (fun acc x -> if x.name = n then acc +. x.bet else acc)
+    0. t.players
+
+let get_players t = t.players
+let get_player_name p = p.name
+
+let fold_status t n =
+  List.fold_left
+    (fun acc x -> if x.name = n then x.left else acc)
+    false t.players
+
+let new_round t =
+  let update_players = List.map (fun x -> { x with left = false }) t.players in
+  start update_players 0. 0.

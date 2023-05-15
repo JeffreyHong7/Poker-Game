@@ -1,0 +1,20 @@
+lib: [
+  "_build/install/default/lib/Poker/META"
+  "_build/install/default/lib/Poker/dune-package"
+  "_build/install/default/lib/Poker/opam"
+  "_build/install/default/lib/Poker/poker.a"
+  "_build/install/default/lib/Poker/poker.cma"
+  "_build/install/default/lib/Poker/poker.cmi"
+  "_build/install/default/lib/Poker/poker.cmt"
+  "_build/install/default/lib/Poker/poker.cmti"
+  "_build/install/default/lib/Poker/poker.cmx"
+  "_build/install/default/lib/Poker/poker.cmxa"
+  "_build/install/default/lib/Poker/poker.ml"
+  "_build/install/default/lib/Poker/poker.mli"
+]
+libexec: [
+  "_build/install/default/lib/Poker/poker.cmxs"
+]
+doc: [
+  "_build/install/default/doc/Poker/README.md"
+]
